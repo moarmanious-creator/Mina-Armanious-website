@@ -81,7 +81,7 @@
   menuBtn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
   nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
-  window.addEventListener('resize', function () { if (window.innerWidth > 1100 && nav.classList.contains('open')) setMenu(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth > 1200 && nav.classList.contains('open')) setMenu(false); });
 
   /* ---------- Active section in nav ---------- */
   var links = Array.prototype.slice.call(nav.querySelectorAll('a[href^="#"]'));

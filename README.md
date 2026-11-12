@@ -30,7 +30,8 @@ The email and phone are also written directly in `index.html`, in the Contact se
 ## Editing content
 
 - English text is the normal text inside each element. The Arabic version of that text is in the element's `data-ar` attribute. When you edit one language, edit the other as well.
-- **Transactions**: each matter is an `<article class="tx" data-cat="...">`. The categories are `bf` (Banking & Finance), `sf` (Structured Finance), `vc` (Venture Capital), `ma` (M&A & Diligence) and `cc` (Corporate & Commercial). To add a matter, copy an existing card.
+- **Transactions** are shown as deal tombstones: each is an `<article class="tx tomb" data-cat="...">`, and adding `tomb-wide` makes one span two columns. The categories are `bf` (Banking & Finance), `sf` (Structured Finance), `vc` (Venture Capital), `ma` (M&A & Diligence) and `cc` (Corporate & Commercial). To add a matter, copy an existing card.
+- **Achievements**: the `#achievements` section (an award card plus a list of milestones).
 - **Colours and fonts**: the CSS variables at the top of `css/styles.css`.
 
 ## Files
@@ -39,7 +40,8 @@ The email and phone are also written directly in `index.html`, in the Contact se
 |---|---|
 | assets/docs/Mina_Armanious_CV.pdf | CV, used by every Download CV button |
 | assets/docs/Mina_Armanious_Credentials.pdf | Scanned certificates, compressed from 7.3 MB to 1.8 MB |
-| assets/img/portrait.jpg | Hero portrait |
-| assets/img/portrait-banque-misr.jpg | Profile photo |
+| assets/img/portrait-editorial.jpg | Hero portrait (black-and-white editorial treatment) |
+| assets/img/banque-misr-editorial.jpg | Profile photo (same treatment) |
+| assets/img/portrait.jpg, portrait-banque-misr.jpg | Original colour photos, kept as sources |
 | assets/img/og-image.jpg | Preview image shown when the link is shared |
 | assets/img/favicon.svg, apple-touch-icon.png | Browser-tab and phone home-screen icons |
