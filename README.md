@@ -15,8 +15,8 @@ Then open http://localhost:8000. Add `?lang=ar` for Arabic.
 
 ## Sections
 
-Hero (with the institutions band), I Profile, II Track record, III Experience, IV Mandates & transactions (two tabs),
-V Flagship achievement, VI Core expertise, VII Credentials, VIII Endorsements, IX What I bring, then Contact.
+Cover (dossier title page with contents and institutions), §I Profile, §II Track record, §III Jurisdictions (interactive map), §IV Experience, §V Mandates & transactions (two tabs),
+§VI Flagship achievement, §VII Core expertise, §VIII Credentials, §IX Endorsements, §X What I bring, §XI Contact.
 
 ## Logos (assets/logos)
 
@@ -55,3 +55,9 @@ To update one, replace the file with one of exactly the same name.
 
 English is the normal text inside each element; the Arabic version is in its `data-ar` attribute. When you edit one language,
 edit the other as well. Colours and fonts are CSS variables at the top of `css/styles.css`.
+
+## Jurisdictions map
+
+The map in §III is a dot-matrix drawing generated from the @svg-maps/world outline (CC BY 4.0, credited in the footer).
+Each jurisdiction is a button in the panel (`.jx`, with English and Arabic `data-*` text) and a pin on the map
+(`.pin[data-k]`). To add one, copy a button and a pin and give both the same `data-k`.

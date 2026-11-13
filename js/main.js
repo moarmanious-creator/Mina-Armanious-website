@@ -86,7 +86,7 @@
     }
     requestAnimationFrame(step);
   }
-  var reveals = document.querySelectorAll('.rv, #chart, #speed');
+  var reveals = document.querySelectorAll('.rv, #chart, #speed, #map');
   if ('IntersectionObserver' in window && !reduceMotion) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
@@ -162,6 +162,41 @@
   qWrap.addEventListener('mouseleave', function () { qDots.classList.remove('paused'); restartQuotes(); });
   restartQuotes();
 
+
+  /* ---------- Jurisdictions map ---------- */
+  var map = document.getElementById('map');
+  var jxButtons = Array.prototype.slice.call(document.querySelectorAll('.jx'));
+  var COUNTRY = { eg: 'eg', kw: 'kw', sa: 'sa', bh: null, om: 'om', ae: 'ae', de: 'us', sv: 'us', vg: null, nl: 'nl', gb: 'gb', sg: null };
+  var currentJ = 'eg';
+  function showJurisdiction(k, focusMap) {
+    var b = jxButtons.filter(function (x) { return x.getAttribute('data-k') === k; })[0]; if (!b || !map) return;
+    currentJ = k; var ar = lang === 'ar';
+    document.getElementById('jurTitle').textContent = b.getAttribute(ar ? 'data-title-ar' : 'data-title');
+    document.getElementById('jurSub').textContent = b.getAttribute(ar ? 'data-sub-ar' : 'data-sub');
+    document.getElementById('jurDesc').textContent = b.getAttribute(ar ? 'data-desc-ar' : 'data-desc');
+    var card = document.getElementById('jurCard'); card.classList.remove('swap'); void card.offsetWidth; card.classList.add('swap');
+    jxButtons.forEach(function (x) { x.setAttribute('aria-pressed', String(x.getAttribute('data-k') === k)); });
+    map.querySelectorAll('.is-on').forEach(function (el) { el.classList.remove('is-on'); });
+    map.classList.toggle('focus', !!focusMap);
+    map.querySelectorAll('[data-k="' + k + '"]').forEach(function (el) { el.classList.add('is-on'); });
+    if (COUNTRY[k]) map.querySelectorAll('.dots[data-c="' + COUNTRY[k] + '"]').forEach(function (el) { el.classList.add('is-on'); });
+  }
+  jxButtons.forEach(function (b) {
+    var k = b.getAttribute('data-k');
+    b.addEventListener('click', function () { showJurisdiction(k, true); });
+    b.addEventListener('mouseenter', function () { showJurisdiction(k, true); });
+    b.addEventListener('focus', function () { showJurisdiction(k, true); });
+  });
+  if (map) {
+    map.querySelectorAll('.pin').forEach(function (pin) {
+      pin.addEventListener('mouseenter', function () { showJurisdiction(pin.getAttribute('data-k'), true); });
+      pin.addEventListener('click', function () { showJurisdiction(pin.getAttribute('data-k'), true); });
+    });
+    var panel = document.querySelector('.jur');
+    panel.addEventListener('mouseleave', function () { map.classList.remove('focus'); });
+    showJurisdiction('eg', false);
+  }
+
   /* ---------- Language ---------- */
   var EN_TITLE = document.title;
   var AR_TITLE = 'مينا أرمانيوس | مستشار قانوني لرأس المال المخاطر والملكية الخاصة والبنوك';
@@ -182,6 +217,7 @@
     langBtn.setAttribute('aria-label', ar ? 'View the site in English' : 'عرض الموقع باللغة العربية');
     store('lang', next);
     requestAnimationFrame(moveInk);
+    if (typeof showJurisdiction === 'function') showJurisdiction(currentJ, false);
   }
   langBtn.addEventListener('click', function () { setLang(lang === 'ar' ? 'en' : 'ar'); });
   var startLang = new URLSearchParams(location.search).get('lang') || store('lang');
