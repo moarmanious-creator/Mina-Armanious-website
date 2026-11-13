@@ -1,6 +1,9 @@
-# Mina Armanious: personal website
+# Mina Armanious: Executive Profile website
 
-A static site with no build step: `index.html`, `css/styles.css`, `js/main.js` and `assets/`.
+A static, bilingual (English / Arabic) website designed as a full-screen slide show.
+It needs no build step: `index.html`, `css/styles.css`, `js/main.js` and `assets/`.
+
+Live (once GitHub Pages is on): https://moarmanious-creator.github.io/Mina-Armanious-website/
 
 ## Preview locally
 
@@ -8,40 +11,41 @@ A static site with no build step: `index.html`, `css/styles.css`, `js/main.js` a
 python3 -m http.server 8000
 ```
 
-Then open http://localhost:8000. Add `?lang=ar` to the address to open the Arabic version.
+Then open http://localhost:8000. Add `?lang=ar` for Arabic, or `#credentials` (any slide id) to open a specific slide.
 
-## Publish
+## How the slide show works
 
-Drag this folder onto https://app.netlify.com/drop. Cloudflare Pages and GitHub Pages also work.
-After you connect a domain, update two things in `index.html`:
+- Each `<section class="slide">` inside `<main class="deck">` is one slide. Its `data-title` and `data-title-ar` attributes feed the
+  slide index ("Contents"), the dot rail and the title in the top bar.
+- Visitors can move between slides with the arrow keys, Page Up/Down, the mouse wheel, swiping, the arrow buttons at the bottom right,
+  the dot rail, or the Contents menu.
+- On phones and short screens, slides scroll freely instead of snapping one at a time.
+- Elements marked `data-anim` animate in when their slide becomes active.
 
-- `<link rel="canonical" href="/">`: change it to the full address.
-- `og:image`: change it to the full address of `assets/img/og-image.jpg`, so LinkedIn and WhatsApp previews show the image.
+To add a slide, copy a `<section class="slide ...">` block. Use `s-dark` (navy) or `s-light` (ivory) and alternate them.
 
-## Settings you will want to change
+## Documents (assets/docs)
 
-These are at the top of `js/main.js`:
-
-- `bookingUrl`: paste a Google Calendar appointment-schedule link or a Calendly link. Every "Request a meeting" button will then open it. Left empty, the buttons open an email.
-- `email` / `phone`: used for the downloadable contact card (vCard).
-
-The email and phone are also written directly in `index.html`, in the Contact section and the `mailto:` links, so change them there too.
-
-## Editing content
-
-- English text is the normal text inside each element. The Arabic version of that text is in the element's `data-ar` attribute. When you edit one language, edit the other as well.
-- **Transactions** are shown as deal tombstones: each is an `<article class="tx tomb" data-cat="...">`, and adding `tomb-wide` makes one span two columns. The categories are `bf` (Banking & Finance), `sf` (Structured Finance), `vc` (Venture Capital), `ma` (M&A & Diligence) and `cc` (Corporate & Commercial). To add a matter, copy an existing card.
-- **Achievements**: the `#achievements` section (an award card plus a list of milestones).
-- **Colours and fonts**: the CSS variables at the top of `css/styles.css`.
-
-## Files
-
-| File | Purpose |
+| File | Used by |
 |---|---|
-| assets/docs/Mina_Armanious_CV.pdf | CV, used by every Download CV button |
-| assets/docs/Mina_Armanious_Credentials.pdf | Scanned certificates, compressed from 7.3 MB to 1.8 MB |
-| assets/img/portrait-editorial.jpg | Hero portrait (black-and-white editorial treatment) |
-| assets/img/banque-misr-editorial.jpg | Profile photo (same treatment) |
-| assets/img/portrait.jpg, portrait-banque-misr.jpg | Original colour photos, kept as sources |
-| assets/img/og-image.jpg | Preview image shown when the link is shared |
-| assets/img/favicon.svg, apple-touch-icon.png | Browser-tab and phone home-screen icons |
+| Mina_Armanious_CV.pdf | Every CV button |
+| Mina_Armanious_Certificates.pdf | View certificates / Professional certificates |
+| Mina_Armanious_Executive_Profile.pptx | Executive Profile presentation (the link stays hidden until this file exists) |
+
+To update one, replace the file with one of exactly the same name.
+
+## Logos (assets/logos)
+
+Logos were cropped from the certificate scans and the original site's files: Banque Misr, BM Ventures, FAB Misr,
+Banque du Caire, ABK, AUC, IMF, HSBC, EBI, BUE, Orascom, Agiba, PMS and Petrotrade.
+
+Kouncel and AfDB have no logo file yet, so they show as typeset names (`logo-word`). To use a real logo, add the file and
+replace `<span class="logo-tile cert-logo logo-word">Kouncel</span>` with
+`<span class="logo-tile cert-logo"><img src="assets/logos/kouncel.png" alt="Kouncel"></span>`.
+
+Logos belong to their owners; the footer disclaimer says they are used for identification only.
+
+## Editing text
+
+English is the normal text inside each element; the Arabic version is in its `data-ar` attribute. When you edit one language,
+edit the other as well. Colours and fonts are CSS variables at the top of `css/styles.css`.
