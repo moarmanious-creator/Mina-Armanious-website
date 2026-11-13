@@ -1,4 +1,4 @@
-/* Mina Armanious — slide-show website. No dependencies. */
+/* Mina Armanious — website behaviour. No dependencies. */
 (function () {
   'use strict';
 
@@ -10,176 +10,126 @@
   };
 
   var html = document.documentElement;
-  var deck = document.getElementById('deck');
-  var slides = Array.prototype.slice.call(document.querySelectorAll('.slide'));
-  var topbar = document.getElementById('topbar');
-  var rail = document.getElementById('rail');
-  var controls = document.getElementById('controls');
-  var titleEl = document.getElementById('slideTitle');
-  var progressBar = document.getElementById('progressBar');
-  var curEl = document.getElementById('cur');
-  var prevBtn = document.getElementById('prevBtn');
-  var nextBtn = document.getElementById('nextBtn');
-  var hint = document.getElementById('hint');
+  var header = document.getElementById('header');
+  var nav = document.getElementById('nav');
   var menuBtn = document.getElementById('menuBtn');
-  var contents = document.getElementById('contents');
-  var contentsList = document.getElementById('contentsList');
   var langBtn = document.getElementById('langBtn');
   var toast = document.getElementById('toast');
-  var current = 0;
-  var lang = 'en';
+  var scrollBar = document.getElementById('scrollBar');
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var lang = 'en';
 
   function store(key, val) {
     try { if (val === undefined) return localStorage.getItem(key); localStorage.setItem(key, val); } catch (e) { return null; }
   }
-  function pad(n) { return (n < 10 ? '0' : '') + n; }
   function showToast(msg) {
     toast.textContent = msg; toast.classList.add('show');
     clearTimeout(showToast.t); showToast.t = setTimeout(function () { toast.classList.remove('show'); }, 2600);
   }
-  function slideTitle(s) { return lang === 'ar' ? s.getAttribute('data-title-ar') : s.getAttribute('data-title'); }
 
-  /* Stagger order for entrance animations */
-  slides.forEach(function (s) {
-    s.querySelectorAll('[data-anim]').forEach(function (el, i) { el.style.setProperty('--i', Math.min(i, 10)); });
+  /* ---------- Harmonised logo sizing ----------
+     Equal visual weight: wide wordmarks get shorter, square emblems taller. */
+  function sizeLogo(img) {
+    var holder = img.closest('.lg'); if (!holder || !img.naturalWidth) return;
+    var base = parseFloat(getComputedStyle(holder).getPropertyValue('--lh')) || 34;
+    var ratio = img.naturalWidth / img.naturalHeight;
+    var maxW = parseFloat(getComputedStyle(holder).getPropertyValue('--lw')) || 9999;
+    var h = base * Math.min(1.45, Math.max(0.62, Math.pow(2.4 / ratio, 0.5)));
+    if (h * ratio > maxW) h = maxW / ratio;
+    holder.querySelectorAll('img').forEach(function (i) { i.style.height = h.toFixed(1) + 'px'; });
+  }
+  document.querySelectorAll('.lg img:first-child').forEach(function (img) {
+    if (img.complete) sizeLogo(img); else img.addEventListener('load', function () { sizeLogo(img); });
   });
 
-  /* ---------- Rail + contents ---------- */
-  function buildNav() {
-    rail.innerHTML = ''; contentsList.innerHTML = '';
-    slides.forEach(function (s, i) {
-      var a = document.createElement('a');
-      a.href = '#' + s.id; a.setAttribute('aria-label', slideTitle(s));
-      a.innerHTML = '<span>' + slideTitle(s) + '</span>';
-      a.setAttribute('aria-current', String(i === current));
-      rail.appendChild(a);
-      var li = document.createElement('li');
-      li.innerHTML = '<a href="#' + s.id + '"><span>' + pad(i + 1) + '</span>' + slideTitle(s) + '</a>';
-      li.firstChild.setAttribute('aria-current', String(i === current));
-      contentsList.appendChild(li);
-    });
+  /* ---------- Header, progress bar, active section ---------- */
+  var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
+  var navLinks = Array.prototype.slice.call(nav.querySelectorAll('a'));
+  var ticking = false;
+  function onScroll() {
+    var y = window.scrollY;
+    header.classList.toggle('solid', y > 40);
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    scrollBar.style.transform = 'scaleX(' + (max > 0 ? y / max : 0) + ')';
+    var mid = y + window.innerHeight * 0.35, active = null;
+    sections.forEach(function (s) { if (s.offsetTop <= mid) active = s.id; });
+    navLinks.forEach(function (a) { a.setAttribute('aria-current', String(a.getAttribute('href') === '#' + active)); });
+    ticking = false;
   }
-  document.getElementById('tot').textContent = pad(slides.length);
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
 
-  /* ---------- Go to slide ---------- */
-  function goTo(i) {
-    i = Math.max(0, Math.min(slides.length - 1, i));
-    slides[i].scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
-  }
-  function slideEndVisible() {
-    var s = slides[current]; var r = s.getBoundingClientRect();
-    return r.bottom <= deck.clientHeight + 4;
-  }
-  prevBtn.addEventListener('click', function () { goTo(current - 1); });
-  nextBtn.addEventListener('click', function () { goTo(current + 1); });
-
-  document.addEventListener('click', function (e) {
-    var a = e.target.closest('a[href^="#"]');
-    if (!a) return;
-    var target = document.getElementById(a.getAttribute('href').slice(1));
-    if (!target || !target.classList.contains('slide')) return;
-    e.preventDefault(); setContents(false); goTo(slides.indexOf(target));
-  });
-
-  document.addEventListener('keydown', function (e) {
-    if (e.target.closest('input, textarea, [contenteditable]')) return;
-    if (e.key === 'Escape' && !contents.hidden) { setContents(false); menuBtn.focus(); return; }
-    if (e.target.closest('.carousel') && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) return;
-    var rtl = html.dir === 'rtl';
-    var nextKeys = ['ArrowDown', 'PageDown', ' ', rtl ? 'ArrowLeft' : 'ArrowRight'];
-    var prevKeys = ['ArrowUp', 'PageUp', rtl ? 'ArrowRight' : 'ArrowLeft'];
-    if (nextKeys.indexOf(e.key) > -1) {
-      if ((e.key === 'ArrowDown' || e.key === ' ') && !slideEndVisible()) return; // let tall slides scroll first
-      e.preventDefault(); goTo(current + 1);
-    } else if (prevKeys.indexOf(e.key) > -1) {
-      if (e.key === 'ArrowUp' && slides[current].getBoundingClientRect().top < -4) return;
-      e.preventDefault(); goTo(current - 1);
-    } else if (e.key === 'Home') { e.preventDefault(); goTo(0); }
-    else if (e.key === 'End') { e.preventDefault(); goTo(slides.length - 1); }
-  });
-
-  /* ---------- Active slide tracking ---------- */
-  function setActive(i) {
-    if (i === current && setActive.ran) return;
-    setActive.ran = true;
-    slides.forEach(function (s, k) {
-      s.classList.toggle('is-active', k === i);
-      if (k === i) s.classList.add('was-seen');
-    });
-    current = i;
-    var s = slides[i];
-    var light = s.classList.contains('s-light');
-    topbar.classList.toggle('on-light', light);
-    rail.classList.toggle('on-light', light);
-    controls.classList.toggle('on-light', light);
-    titleEl.textContent = i === 0 ? '' : pad(i + 1) + ' · ' + slideTitle(s);
-    curEl.textContent = pad(i + 1);
-    progressBar.style.width = ((i + 1) / slides.length * 100) + '%';
-    prevBtn.disabled = i === 0; nextBtn.disabled = i === slides.length - 1;
-    rail.querySelectorAll('a').forEach(function (a, k) { a.setAttribute('aria-current', String(k === i)); });
-    contentsList.querySelectorAll('a').forEach(function (a, k) { a.setAttribute('aria-current', String(k === i)); });
-    if (i > 0 && hint) hint.classList.add('gone');
-    if (history.replaceState) history.replaceState(null, '', i === 0 ? location.pathname + location.search : '#' + s.id);
-    runCounters(s);
-  }
-  if ('IntersectionObserver' in window) {
-    var ratios = slides.map(function () { return 0; });
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) { ratios[slides.indexOf(en.target)] = en.isIntersecting ? en.intersectionRect.height : 0; });
-      var best = 0; ratios.forEach(function (r, k) { if (r > ratios[best]) best = k; });
-      setActive(best);
-    }, { root: deck, threshold: [0, .15, .3, .5, .7, .9, 1] });
-    slides.forEach(function (s) { io.observe(s); });
-  }
-
-  /* ---------- Touch: swipe left/right also changes slide ---------- */
-  var tx = 0, ty = 0;
-  deck.addEventListener('touchstart', function (e) { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, { passive: true });
-  deck.addEventListener('touchend', function (e) {
-    if (e.target.closest('.carousel')) return;
-    var dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
-    if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.6) {
-      var forward = html.dir === 'rtl' ? dx > 0 : dx < 0;
-      goTo(current + (forward ? 1 : -1));
-    }
-  }, { passive: true });
-
-  /* ---------- Contents overlay ---------- */
-  function setContents(open) {
-    contents.hidden = !open;
-    document.body.classList.toggle('contents-open', open);
+  /* ---------- Mobile menu ---------- */
+  function setMenu(open) {
+    nav.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
     menuBtn.setAttribute('aria-expanded', String(open));
-    if (open) { var a = contentsList.querySelector('a[aria-current="true"]') || contentsList.querySelector('a'); if (a) a.focus(); }
+    menuBtn.setAttribute('aria-label', open ? (lang === 'ar' ? 'إغلاق القائمة' : 'Close menu') : (lang === 'ar' ? 'فتح القائمة' : 'Open menu'));
   }
-  menuBtn.addEventListener('click', function () { setContents(contents.hidden); });
+  menuBtn.addEventListener('click', function () { setMenu(!nav.classList.contains('open')); });
+  nav.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && nav.classList.contains('open')) { setMenu(false); menuBtn.focus(); } });
+  window.addEventListener('resize', function () { if (window.innerWidth > 1180 && nav.classList.contains('open')) setMenu(false); });
 
-  /* ---------- Animated counters ---------- */
+  /* ---------- Reveal, counters, chart, speed bars ---------- */
   function fmt(n) { return n >= 1000 ? n.toLocaleString('en-US') : String(n); }
-  function runCounters(slide) {
-    slide.querySelectorAll('[data-count]').forEach(function (el) {
-      if (el.dataset.done) return; el.dataset.done = '1';
-      var end = parseFloat(el.getAttribute('data-count')); var suffix = el.getAttribute('data-suffix') || '';
-      if (reduceMotion) { el.textContent = fmt(end) + suffix; return; }
-      var t0 = null, dur = 1400;
-      function step(t) {
-        if (!t0) t0 = t; var p = Math.min(1, (t - t0) / dur); var e = 1 - Math.pow(1 - p, 3);
-        el.textContent = fmt(Math.round(end * e)) + suffix;
-        if (p < 1) requestAnimationFrame(step);
-      }
-      requestAnimationFrame(step);
+  function count(el) {
+    if (el.dataset.done) return; el.dataset.done = '1';
+    var end = parseFloat(el.getAttribute('data-count')), suffix = el.getAttribute('data-suffix') || '';
+    if (reduceMotion) { el.textContent = fmt(end) + suffix; return; }
+    var t0 = null;
+    function step(t) {
+      if (!t0) t0 = t; var p = Math.min(1, (t - t0) / 1600), e = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(Math.round(end * e)) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var reveals = document.querySelectorAll('.rv, #chart, #speed');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        en.target.classList.add('in');
+        en.target.querySelectorAll('[data-count]').forEach(count);
+        io.unobserve(en.target);
+      });
+    }, { rootMargin: '0px 0px -10% 0px', threshold: 0.08 });
+    reveals.forEach(function (el) {
+      var sib = el.parentElement ? Array.prototype.indexOf.call(el.parentElement.children, el) : 0;
+      el.style.setProperty('--d', Math.min(sib, 6) * 80 + 'ms');
+      io.observe(el);
     });
+  } else {
+    reveals.forEach(function (el) { el.classList.add('in'); });
+    document.querySelectorAll('[data-count]').forEach(count);
   }
 
-  /* ---------- Carousels ---------- */
-  document.querySelectorAll('[data-car]').forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      var car = document.getElementById(btn.getAttribute('data-car'));
-      var card = car.firstElementChild; var step = card ? card.getBoundingClientRect().width + 18 : 300;
-      var dir = parseInt(btn.getAttribute('data-dir'), 10) * (html.dir === 'rtl' ? -1 : 1);
-      car.scrollBy({ left: dir * step, behavior: reduceMotion ? 'auto' : 'smooth' });
+  /* ---------- Tabs ---------- */
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'));
+  var ink = document.querySelector('.tab-ink');
+  function moveInk() {
+    var t = tabs.filter(function (x) { return x.getAttribute('aria-selected') === 'true'; })[0]; if (!t || !ink) return;
+    ink.style.left = t.offsetLeft + 'px'; ink.style.width = t.offsetWidth + 'px';
+  }
+  function selectTab(t, focus) {
+    tabs.forEach(function (x) {
+      var on = x === t; x.setAttribute('aria-selected', String(on)); x.tabIndex = on ? 0 : -1;
+      document.getElementById(x.getAttribute('aria-controls')).hidden = !on;
+    });
+    if (focus) t.focus(); moveInk();
+  }
+  tabs.forEach(function (t, i) {
+    t.addEventListener('click', function () { selectTab(t); });
+    t.addEventListener('keydown', function (e) {
+      var dir = (e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0) * (html.dir === 'rtl' ? -1 : 1);
+      if (dir) { e.preventDefault(); selectTab(tabs[(i + dir + tabs.length) % tabs.length], true); }
     });
   });
+  window.addEventListener('resize', moveInk);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(moveInk);
+  moveInk();
 
   /* ---------- Endorsements ---------- */
   var quotes = Array.prototype.slice.call(document.querySelectorAll('#quotes .q'));
@@ -203,7 +153,7 @@
   function restartQuotes() {
     clearInterval(qTimer);
     if (reduceMotion) { qDots.classList.add('paused'); return; }
-    qTimer = setInterval(function () { if (slides[current] && slides[current].id === 'endorsements') showQuote(qi + 1); }, CONFIG.quoteInterval);
+    qTimer = setInterval(function () { showQuote(qi + 1); }, CONFIG.quoteInterval);
   }
   document.getElementById('qPrev').addEventListener('click', function () { showQuote(qi - 1, true); });
   document.getElementById('qNext').addEventListener('click', function () { showQuote(qi + 1, true); });
@@ -213,12 +163,8 @@
   restartQuotes();
 
   /* ---------- Language ---------- */
-  var TEXT = {
-    en: { vcard: 'Contact card downloaded', prev: 'Previous slide', next: 'Next slide' },
-    ar: { vcard: 'تم تنزيل بطاقة الاتصال', prev: 'الشريحة السابقة', next: 'الشريحة التالية' }
-  };
   var EN_TITLE = document.title;
-  var AR_TITLE = 'مينا أرمانيوس | الملف التنفيذي';
+  var AR_TITLE = 'مينا أرمانيوس | مستشار قانوني لرأس المال المخاطر والملكية الخاصة والبنوك';
   function setLang(next) {
     lang = next; var ar = next === 'ar';
     document.querySelectorAll('[data-ar]').forEach(function (el) {
@@ -234,12 +180,12 @@
     langBtn.textContent = ar ? 'EN' : 'عربي';
     langBtn.lang = ar ? 'en' : 'ar';
     langBtn.setAttribute('aria-label', ar ? 'View the site in English' : 'عرض الموقع باللغة العربية');
-    prevBtn.setAttribute('aria-label', TEXT[lang].prev); nextBtn.setAttribute('aria-label', TEXT[lang].next);
-    buildNav();
-    var s = slides[current]; titleEl.textContent = current === 0 ? '' : pad(current + 1) + ' · ' + slideTitle(s);
     store('lang', next);
+    requestAnimationFrame(moveInk);
   }
   langBtn.addEventListener('click', function () { setLang(lang === 'ar' ? 'en' : 'ar'); });
+  var startLang = new URLSearchParams(location.search).get('lang') || store('lang');
+  if (startLang === 'ar') setLang('ar');
 
   /* ---------- Optional documents: hide links to files not uploaded yet ---------- */
   if (location.protocol.indexOf('http') === 0 && window.fetch) {
@@ -258,15 +204,8 @@
     var a = document.createElement('a'); a.href = url; a.download = 'Mina_Armanious.vcf';
     document.body.appendChild(a); a.click(); a.remove();
     setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
-    showToast(TEXT[lang].vcard);
+    showToast(lang === 'ar' ? 'تم تنزيل بطاقة الاتصال' : 'Contact card downloaded');
   });
 
-  /* ---------- Start ---------- */
   var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
-  var startLang = new URLSearchParams(location.search).get('lang') || store('lang');
-  if (startLang === 'ar') setLang('ar'); else buildNav();
-  setActive(0);
-  var startId = location.hash.slice(1);
-  var startIdx = slides.findIndex(function (s) { return s.id === startId; });
-  if (startIdx > 0) setTimeout(function () { slides[startIdx].scrollIntoView({ block: 'start' }); }, 60);
 })();

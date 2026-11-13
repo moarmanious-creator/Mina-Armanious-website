@@ -4,14 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Mina Armanious | Venture Capital, Private Equity &amp; Banking Counsel | Cairo</title>
-<meta name="description" content="Executive profile of Mina Osama Armanious: venture capital and private equity legal lead with 6+ years across Banque Misr, BM Ventures, First Abu Dhabi Bank Misr, Banque du Caire and Al Ahli Bank of Kuwait – Egypt. Admitted to the Egyptian Bar.">
+<meta name="description" content="Mina Osama Armanious: venture capital and private equity legal lead with 6+ years across Banque Misr, BM Ventures, First Abu Dhabi Bank Misr, Banque du Caire and Al Ahli Bank of Kuwait – Egypt. Admitted to the Egyptian Bar.">
 <meta name="author" content="Mina Osama Armanious">
 <meta name="theme-color" content="#0b1524">
 <link rel="canonical" href="https://moarmanious-creator.github.io/Mina-Armanious-website/">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://moarmanious-creator.github.io/Mina-Armanious-website/">
-<meta property="og:title" content="Mina Armanious | Executive Profile">
-<meta property="og:description" content="Venture capital, private equity and banking counsel across Egypt and the MENA region.">
+<meta property="og:title" content="Mina Armanious | Venture Capital, Private Equity & Banking Counsel">
+<meta property="og:description" content="Legal counsel across venture capital, private equity and banking in Egypt and the MENA region.">
 <meta property="og:image" content="https://moarmanious-creator.github.io/Mina-Armanious-website/assets/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -22,6 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&family=Amiri:wght@400;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<link rel="preload" as="image" href="assets/img/portrait-editorial.jpg">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -41,179 +42,154 @@
 <script>document.documentElement.classList.add('js');</script>
 </head>
 <body>
-<a class="skip" href="#cover" data-ar="انتقل إلى المحتوى">Skip to content</a>
+<a class="skip" href="#main" data-ar="انتقل إلى المحتوى">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"><span id="scrollBar"></span></div>
 
-<!-- ============ TOP BAR ============ -->
-<header class="topbar" id="topbar">
-  <a class="brand" href="#cover" aria-label="Mina Armanious — first slide">
-    <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect x=".5" y=".5" width="39" height="39" fill="none" stroke="currentColor" stroke-opacity=".6"/><text x="20" y="26.5" text-anchor="middle" fill="currentColor" font-family="Cormorant Garamond, serif" font-size="17" font-weight="500" letter-spacing="1">MA</text></svg>
-    <span class="brand-name"><span data-ar="مينا أرمانيوس">Mina Armanious</span><small data-ar="الملف التنفيذي">Executive Profile</small></span>
-  </a>
-  <p class="topbar-title" id="slideTitle" aria-live="polite"></p>
-  <div class="topbar-actions">
-    <button class="tb-btn" id="langBtn" type="button" lang="ar" aria-label="عرض الموقع باللغة العربية">عربي</button>
-    <a class="tb-btn tb-cv" href="assets/docs/Mina_Armanious_CV.pdf" download data-ar="السيرة الذاتية">CV</a>
-    <button class="tb-btn tb-menu" id="menuBtn" type="button" aria-controls="contents" aria-expanded="false">
-      <span class="tb-menu-label" data-ar="المحتويات">Contents</span><span class="tb-menu-icon" aria-hidden="true"><i></i><i></i></span>
-    </button>
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="wrap header-row">
+    <a class="brand" href="#top" aria-label="Mina Armanious — home">
+      <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect x=".5" y=".5" width="39" height="39" fill="none" stroke="currentColor" stroke-opacity=".7"/><text x="20" y="26.5" text-anchor="middle" fill="currentColor" font-family="Cormorant Garamond, serif" font-size="17" font-weight="500" letter-spacing="1">MA</text></svg>
+      <span class="brand-name"><span data-ar="مينا أرمانيوس">Mina Armanious</span><small data-ar="رأس المال المخاطر · الملكية الخاصة · البنوك">Venture · Private Equity · Banking</small></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#profile" data-ar="الملف">Profile</a>
+      <a href="#experience" data-ar="الخبرة">Experience</a>
+      <a href="#mandates" data-ar="الصفقات">Mandates</a>
+      <a href="#record" data-ar="السجل">Track record</a>
+      <a href="#credentials" data-ar="المؤهلات">Credentials</a>
+      <a href="#endorsements" data-ar="التوصيات">Endorsements</a>
+      <a href="#contact" data-ar="التواصل">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <button class="hbtn" id="langBtn" type="button" lang="ar" aria-label="عرض الموقع باللغة العربية">عربي</button>
+      <a class="hbtn hbtn-gold" href="assets/docs/Mina_Armanious_CV.pdf" download data-ar="السيرة الذاتية">Download CV</a>
+      <button class="menu-btn" id="menuBtn" type="button" aria-controls="nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+    </div>
   </div>
-  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
 </header>
 
-<!-- ============ CONTENTS OVERLAY ============ -->
-<nav class="contents" id="contents" aria-label="Contents" hidden>
-  <div class="contents-inner">
-    <p class="eyebrow" data-ar="المحتويات">Contents</p>
-    <ol class="contents-list" id="contentsList"></ol>
-  </div>
-</nav>
+<main id="main">
 
-<!-- ============ SLIDE RAIL ============ -->
-<nav class="rail" id="rail" aria-label="Slides"></nav>
-
-<!-- ============ DECK CONTROLS ============ -->
-<div class="controls" id="controls">
-  <button class="ctl" id="prevBtn" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-  <p class="counter"><b id="cur">01</b><span>/</span><span id="tot">13</span></p>
-  <button class="ctl" id="nextBtn" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-</div>
-<p class="hint" id="hint" data-ar="استخدم الأسهم أو مرّر للتنقل بين الشرائح">Use the arrow keys or scroll to move between slides</p>
-
-<main class="deck" id="deck">
-
-<!-- ===== 01 COVER ===== -->
-<section class="slide s-dark s-cover" id="cover" data-title="Cover" data-title-ar="الغلاف">
-  <div class="slide-inner cover-grid">
-    <div class="cover-text">
-      <p class="eyebrow" data-anim data-ar="الملف التنفيذي">Executive Profile</p>
-      <h1 data-anim data-ar="مينا أسامة <em>أرمانيوس</em>">Mina Osama <em>Armanious</em></h1>
-      <p class="cover-role" data-anim data-ar="قائد قانوني لرأس المال المخاطر والملكية الخاصة · البنوك والتمويل">Venture Capital &amp; Private Equity Legal Lead · Banking &amp; Finance</p>
-      <p class="cover-statement" data-anim data-ar="محامٍ للشركات ذو حسٍّ تجاري، يربط بين التقدير القانوني وأولويات الأعمال والتنفيذ المنضبط: يصوغ الاتفاقيات، ويوزّع المخاطر، ويبني الضوابط التي تتيح للمؤسسات المعقدة أن تتحرك بثقة.">A commercially minded corporate lawyer who bridges legal judgment, business priorities and disciplined execution: structuring agreements, allocating risk and building the controls that let complex organisations move with confidence.</p>
-      <ul class="cover-facts" data-anim>
-        <li data-ar="القاهرة، مصر">Cairo, Egypt</li>
-        <li data-ar="مقيد بنقابة المحامين المصرية (2020)">Admitted, Egyptian Bar (2020)</li>
-        <li data-ar="أكثر من 6 سنوات في أربعة بنوك رائدة">6+ years across four leading banks</li>
+<!-- ================= HERO ================= -->
+<section class="hero dark" id="top" aria-labelledby="hero-title">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow rv" data-ar="مستشار قانوني · القاهرة · الشرق الأوسط وشمال أفريقيا">Legal Counsel · Cairo · MENA</p>
+      <h1 id="hero-title" class="rv" data-ar="مينا أسامة <em>أرمانيوس</em>">Mina Osama <em>Armanious</em></h1>
+      <p class="hero-role rv" data-ar="قائد قانوني لرأس المال المخاطر والملكية الخاصة · البنوك والتمويل">Venture Capital &amp; Private Equity Legal Lead · Banking &amp; Finance</p>
+      <p class="hero-statement rv" data-ar="محامٍ للشركات ذو حسٍّ تجاري، يربط بين التقدير القانوني وأولويات الأعمال والتنفيذ المنضبط: يصوغ الاتفاقيات، ويوزّع المخاطر، ويبني الضوابط التي تتيح للمؤسسات المعقدة أن تتحرك بثقة.">A commercially minded corporate lawyer who bridges legal judgment, business priorities and disciplined execution: structuring agreements, allocating risk and building the controls that let complex organisations move with confidence.</p>
+      <ul class="hero-facts rv">
+        <li data-ar="مقيد بنقابة المحامين المصرية · 2020">Admitted, Egyptian Bar · 2020</li>
+        <li data-ar="عضو لجنة بنقابة المحامين الدولية">IBA Committee Member</li>
+        <li data-ar="أكثر من 6 سنوات في أربعة بنوك رائدة">6+ years, four leading banks</li>
       </ul>
-      <div class="btn-row" data-anim>
-        <a class="btn btn-brass" href="#profile" data-ar="ابدأ العرض">Begin the presentation <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-        <a class="btn btn-line" href="assets/docs/Mina_Armanious_CV.pdf" download data-ar="تحميل السيرة الذاتية">Download CV</a>
+      <div class="btn-row rv">
+        <a class="btn btn-gold" href="#experience" data-ar="استعراض المسيرة">Explore the career <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#contact" data-ar="تواصل">Get in touch</a>
       </div>
     </div>
-    <figure class="cover-portrait" data-anim>
+    <figure class="hero-portrait rv">
       <img src="assets/img/portrait-editorial.jpg" width="468" height="624" alt="Mina Armanious, seated, overlooking the Nile in Cairo" data-ar-alt="مينا أرمانيوس جالساً مطلاً على نيل القاهرة">
+      <figcaption><span data-ar="حالياً">Currently</span><b data-ar="بنك مصر · بي إم فنتشرز">Banque Misr · BM Ventures</b></figcaption>
     </figure>
   </div>
-  <div class="logo-strip" data-anim>
-    <span class="logo-tile"><img src="assets/logos/banque-misr.png" alt="Banque Misr"></span>
-    <span class="logo-tile"><img src="assets/logos/bm-ventures.png" alt="BM Ventures"></span>
-    <span class="logo-tile logo-fill"><img src="assets/logos/fab-misr.png" alt="First Abu Dhabi Bank Misr"></span>
-    <span class="logo-tile logo-fill"><img src="assets/logos/banque-du-caire.png" alt="Banque du Caire"></span>
-    <span class="logo-tile"><img src="assets/logos/abk.png" alt="Al Ahli Bank of Kuwait – Egypt"></span>
+  <div class="wrap">
+    <div class="trust rv">
+      <p class="trust-label" data-ar="المؤسسات">Institutions</p>
+      <ul class="trust-logos">
+        <li><span class="lg"><img src="assets/logos/banque-misr-ivory.png" alt="Banque Misr"></span></li>
+        <li><span class="lg"><img src="assets/logos/bm-ventures-ivory.png" alt="BM Ventures"></span></li>
+        <li><span class="lg"><img src="assets/logos/fab-ivory.png" alt="First Abu Dhabi Bank Misr"></span></li>
+        <li><span class="lg"><img src="assets/logos/banque-du-caire-ivory.png" alt="Banque du Caire"></span></li>
+        <li><span class="lg"><img src="assets/logos/abk-ivory.png" alt="Al Ahli Bank of Kuwait – Egypt"></span></li>
+      </ul>
+    </div>
   </div>
 </section>
 
-<!-- ===== 02 PROFILE ===== -->
-<section class="slide s-light" id="profile" data-title="Executive summary" data-title-ar="الملخص التنفيذي">
-  <div class="slide-inner profile-grid">
-    <figure class="profile-photo" data-anim>
+<!-- ================= PROFILE ================= -->
+<section class="section light" id="profile" aria-labelledby="profile-title">
+  <div class="wrap profile-grid">
+    <figure class="profile-photo rv">
       <img src="assets/img/banque-misr-editorial.jpg" width="555" height="740" loading="lazy" alt="Mina Armanious at the entrance of Banque Misr" data-ar-alt="مينا أرمانيوس أمام مدخل بنك مصر">
       <figcaption data-ar="بنك مصر، القاهرة">Banque Misr, Cairo</figcaption>
     </figure>
-    <div>
-      <p class="eyebrow" data-anim><span class="num">01</span><span data-ar="الملخص التنفيذي">Executive summary</span></p>
-      <h2 class="h-slide" data-anim data-ar="حيث يلتقي القانون ورأس المال <em>واستراتيجية الاستثمار</em>">Where law, capital and investment strategy <em>meet</em></h2>
-      <p class="lead" data-anim data-ar="محامٍ متخصص في رأس المال المخاطر والملكية الخاصة، بخبرة تتجاوز ست سنوات في أربعة بنوك رائدة في مصر ومنطقة الشرق الأوسط وشمال أفريقيا. يقود مينا مسارات العمل القانونية لاستثمارات رأس المال المخاطر والملكية الخاصة والتحالفات الاستراتيجية وشؤون الصناديق في قطاع الابتكار والمشروعات الاستراتيجية ببنك مصر.">A venture capital and private equity lawyer with 6+ years across four leading banks in Egypt and the MENA region. Mina leads legal workstreams for VC and PE investments, strategic alliances and fund-level matters at Banque Misr's Innovation &amp; Strategic Ventures Sector.</p>
-      <p class="body" data-anim data-ar="وأساس هذه الخبرة في جانب الائتمان: توثيق قانوني لمحافظ ائتمانية تتجاوز 7 مليارات دولار في مصر والكويت وعُمان والبحرين والسعودية، تشمل القروض المشتركة والتمويل المهيكل والإسلامي ومنتجات الخدمات المصرفية الاستثمارية وهياكل الضمانات المعقدة.">The foundation is credit-side: legal documentation for credit portfolios exceeding USD 7 billion across Egypt, Kuwait, Oman, Bahrain and Saudi Arabia, spanning syndicated loans, structured and Islamic finance, investment banking products and complex collateral structures.</p>
-      <dl class="badges" data-anim>
-        <div><dt data-ar="القيد">Admission</dt><dd data-ar="محامٍ مقيد، نقابة المحامين المصرية · 2020">Admitted Lawyer, Egyptian Bar Association · 2020</dd></div>
-        <div><dt>IBA</dt><dd data-ar="عضو لجنة تنظيم مهنة المحاماة، نقابة المحامين الدولية · 2025">Member, Regulation of Lawyers' Committee, International Bar Association · 2025</dd></div>
-        <div><dt data-ar="قيد الدراسة">In progress</dt><dd data-ar="ماجستير القانون والاقتصاد (MLEA)، جامعة القاهرة · جامعة هامبورغ">MLEA, Law &amp; Economics, Cairo University · Universität Hamburg</dd></div>
-      </dl>
+    <div class="profile-body">
+      <p class="eyebrow rv"><span class="idx">I</span><span data-ar="الملف المهني">Profile</span></p>
+      <h2 class="h2 rv" data-ar="حيث يلتقي القانون ورأس المال <em>واستراتيجية الاستثمار</em>">Where law, capital and investment strategy <em>meet</em></h2>
+      <p class="lead rv" data-ar="محامٍ متخصص في رأس المال المخاطر والملكية الخاصة، بخبرة تتجاوز ست سنوات في أربعة بنوك رائدة في مصر ومنطقة الشرق الأوسط وشمال أفريقيا. يقود مينا مسارات العمل القانونية لاستثمارات رأس المال المخاطر والملكية الخاصة والتحالفات الاستراتيجية وشؤون الصناديق في قطاع الابتكار والمشروعات الاستراتيجية ببنك مصر.">A venture capital and private equity lawyer with 6+ years across four leading banks in Egypt and the MENA region. Mina leads legal workstreams for VC and PE investments, strategic alliances and fund-level matters at Banque Misr's Innovation &amp; Strategic Ventures Sector.</p>
+      <p class="body rv" data-ar="وأساس هذه الخبرة في جانب الائتمان: توثيق قانوني لمحافظ ائتمانية تتجاوز 7 مليارات دولار في مصر والكويت وعُمان والبحرين والسعودية، تشمل القروض المشتركة والتمويل المهيكل والإسلامي ومنتجات الخدمات المصرفية الاستثمارية وهياكل الضمانات المعقدة. ويقدم المشورة في هيكلة الاستثمار والفحص القانوني والحوكمة وتنفيذ الصفقات والمخاطر القانونية.">The foundation is credit-side: legal documentation for credit portfolios exceeding USD 7 billion across Egypt, Kuwait, Oman, Bahrain and Saudi Arabia, spanning syndicated loans, structured and Islamic finance, investment banking products and complex collateral. Mina advises on investment structuring, legal due diligence, governance, transaction execution and legal risk.</p>
+      <ul class="creds-row rv">
+        <li>
+          <span class="seal-mark" aria-hidden="true">EBA</span>
+          <div><b data-ar="محامٍ مقيد">Admitted Lawyer</b><span data-ar="نقابة المحامين المصرية · 2020">Egyptian Bar Association · 2020</span></div>
+        </li>
+        <li>
+          <span class="lg lg-sq"><img src="assets/logos/iba-ink.png" alt="International Bar Association"></span>
+          <div><b data-ar="عضو لجنة تنظيم مهنة المحاماة">Regulation of Lawyers' Committee</b><span data-ar="نقابة المحامين الدولية · 2025">International Bar Association · 2025</span></div>
+        </li>
+        <li>
+          <span class="lg lg-sq"><img src="assets/logos/ain-shams-ink.png" alt="Ain Shams University"></span>
+          <div><b data-ar="ليسانس الحقوق (القسم الإنجليزي)">LL.B., English Section</b><span data-ar="جامعة عين شمس">Ain Shams University</span></div>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- ===== 03 CAREER ===== -->
-<section class="slide s-dark" id="career" data-title="Career journey" data-title-ar="المسيرة المهنية">
-  <div class="slide-inner">
-    <div class="slide-head">
-      <p class="eyebrow" data-anim><span class="num">02</span><span data-ar="المسيرة المهنية">Career journey</span></p>
-      <h2 class="h-slide" data-anim data-ar="أربعة بنوك رائدة، كل خطوة <em>أوسع</em> نطاقاً ومسؤولية">Four leading banks, each step <em>wider</em> in scope and responsibility</h2>
+<!-- ================= TRACK RECORD ================= -->
+<section class="section dark" id="record" aria-labelledby="record-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv"><span class="idx">II</span><span data-ar="السجل المهني">Track record</span></p>
+        <h2 id="record-title" class="h2 rv" data-ar="خبرة على نطاق <em>واسع</em>">Experience at <em>scale</em></h2>
+      </div>
+      <p class="sec-lede rv" data-ar="محافظ وولايات قضائية وعملاء واستحواذ مصرفي، عبر أربعة بنوك.">Portfolios, jurisdictions, clients and a bank acquisition, across four banks.</p>
     </div>
-    <ol class="journey">
-      <li data-anim>
-        <span class="j-dot" aria-hidden="true"></span>
-        <p class="j-when" data-ar="يناير 2020 – يونيو 2022">Jan 2020 – Jun 2022</p>
-        <span class="logo-tile sm"><img src="assets/logos/abk.png" alt="Al Ahli Bank of Kuwait – Egypt"></span>
-        <h3 data-ar="مسؤول الحوكمة والعقود ← مستشار أول للمخاطر القانونية">Governance &amp; Contracts Officer → Senior Legal Risk Advisor</h3>
-        <ul>
-          <li data-ar="عقود المشتريات والإيجار والبرمجيات والخدمات">Procurement, lease, software and service contracts</li>
-          <li data-ar="استشارات المخاطر القانونية لمحفظة ائتمان الشركات">Legal-risk advisory on the corporate credit portfolio</li>
-          <li data-ar="تكريم الأداء المتميز">Recognition of Outstanding Performance</li>
-        </ul>
-        <p class="j-metric" data-ar="≈ 1.3 مليار دولار · 350 عميلاً">~USD 1.3B · 350 clients</p>
-      </li>
-      <li data-anim>
-        <span class="j-dot" aria-hidden="true"></span>
-        <p class="j-when" data-ar="يونيو 2022 – سبتمبر 2024">Jun 2022 – Sep 2024</p>
-        <span class="logo-tile sm logo-fill"><img src="assets/logos/fab-misr.png" alt="First Abu Dhabi Bank Misr"></span>
-        <h3 data-ar="رئيس قسم العقود والضمانات – منطقة الشرق الأوسط وشمال أفريقيا">Contracts &amp; Collaterals Section Head – MENA Region</h3>
-        <ul>
-          <li data-ar="أشرف على 3 فرق قانونية في 5 ولايات قضائية">Supervised 3 legal teams across 5 jurisdictions</li>
-          <li data-ar="أدخل أول نظام آلي لصياغة عقود التسهيلات">Introduced the first automated facility-contract drafting</li>
-          <li data-ar="مسار العمل القانوني لاستحواذ البنك على بنك عوده مصر">Legal workstream, FAB's acquisition of Bank Audi Egypt</li>
-        </ul>
-        <p class="j-metric" data-ar="≈ 3.9 مليار دولار · 800 عميل">~USD 3.9B · 800 clients</p>
-      </li>
-      <li data-anim>
-        <span class="j-dot" aria-hidden="true"></span>
-        <p class="j-when" data-ar="أكتوبر 2024 – يوليو 2025">Oct 2024 – Jul 2025</p>
-        <span class="logo-tile sm logo-fill"><img src="assets/logos/banque-du-caire.png" alt="Banque du Caire"></span>
-        <h3 data-ar="قائد فريق العقود والضمانات">Contracts &amp; Collaterals Team Leader</h3>
-        <ul>
-          <li data-ar="قاد فريقاً قانونياً من 8 أعضاء بنظام المُعِد والمراجع">Led an 8-member maker–checker legal team</li>
-          <li data-ar="اتفاقيات التسهيلات للقروض والتأجير التمويلي والتخصيم والتوريق">Facility agreements across loans, leasing, factoring and securitisation</li>
-          <li data-ar="هيكلة حزم الضمانات والتعهدات">Structured collateral and covenant packages</li>
-        </ul>
-        <p class="j-metric" data-ar="+3.2 مليار دولار · نحو 3,000 عميل">USD 3.2B+ · ~3,000 clients</p>
-      </li>
-      <li class="j-current" data-anim>
-        <span class="j-dot" aria-hidden="true"></span>
-        <p class="j-when" data-ar="أغسطس 2025 – حتى الآن">Aug 2025 – Present</p>
-        <span class="logo-tile sm"><img src="assets/logos/banque-misr.png" alt="Banque Misr"></span>
-        <h3 data-ar="مسؤول التحالفات والعقود · مستشار مجلس الإدارة ورئيس الشؤون القانونية للملكية الخاصة ورأس المال المخاطر">Alliances &amp; Contracts Lead · Board Advisor &amp; Head of Legal, PE &amp; VC</h3>
-        <ul>
-          <li data-ar="التحالفات والعقود لقطاع الابتكار والمشروعات الاستراتيجية">Alliances and contracts for the Innovation &amp; Strategic Ventures Sector</li>
-          <li data-ar="رئاسة الشؤون القانونية لاستثمارات الملكية الخاصة ورأس المال المخاطر">Head of legal for private equity and venture capital investments</li>
-          <li data-ar="المشورة لمجلس الإدارة في الاستثمار والحوكمة والمخاطر">Advises the board on investments, governance and risk</li>
-        </ul>
-        <p class="j-metric" data-ar="الدور الحالي · مجموعة بنك مصر">Current · Banque Misr Group</p>
-      </li>
-    </ol>
-    <div class="early" data-anim>
-      <p data-ar="البدايات: باحث متطوع في جامعة الدول العربية (2018–2019) وتدريب قانوني لدى:">Early career: volunteer junior researcher, League of Arab States (2018–19), and legal internships at</p>
-      <span class="logo-tile xs"><img src="assets/logos/orascom.png" alt="Orascom Construction"></span>
-      <span class="logo-tile xs"><img src="assets/logos/agiba.png" alt="Agiba Petroleum"></span>
-      <span class="logo-tile xs"><img src="assets/logos/pms.png" alt="Petroleum Marine Services"></span>
-      <span class="logo-tile xs"><img src="assets/logos/petrotrade.png" alt="Petrotrade"></span>
+    <div class="record">
+      <ul class="stats">
+        <li class="stat-hero rv"><span class="num"><small>USD</small><b data-count="7" data-suffix="B+">7B+</b></span><span class="lbl" data-ar="محافظ ائتمانية تم دعمها قانونياً: أبوظبي الأول مصر (≈3.9) وبنك القاهرة (+3.2)">Credit portfolios supported: FAB Misr (~3.9B) and Banque du Caire (3.2B+)</span></li>
+        <li class="rv"><span class="num"><b data-count="5">5</b></span><span class="lbl" data-ar="ولايات قضائية: مصر والكويت وعُمان والبحرين والسعودية">MENA jurisdictions: Egypt, Kuwait, Oman, Bahrain, Saudi Arabia</span></li>
+        <li class="rv"><span class="num"><b data-count="3000" data-suffix="+">3,000+</b></span><span class="lbl" data-ar="عميل من الشركات عبر المحافظ">Corporate clients covered across portfolios</span></li>
+        <li class="rv"><span class="num"><b data-count="8">8</b></span><span class="lbl" data-ar="أعضاء فريق تحت قيادته · بنك القاهرة">Team members led · Banque du Caire</span></li>
+        <li class="rv"><span class="num"><b data-count="1">1</b></span><span class="lbl" data-ar="استحواذ مصرفي · بنك عوده مصر">Bank acquisition · Bank Audi Egypt</span></li>
+      </ul>
+      <figure class="chart rv" id="chart">
+        <figcaption><b data-ar="المحفظة تحت التغطية القانونية حسب الدور">Portfolio under legal coverage, by role</b><span data-ar="إجمالي محفظة ائتمان الشركات، بمليارات الدولارات (تقريبي)">Gross corporate credit portfolio, USD billions (approx.)</span></figcaption>
+        <div class="bars">
+          <div class="bar" style="--v:1.3"><span class="bar-val">1.3</span><span class="bar-fill"></span><span class="bar-label" data-ar="الأهلي الكويتي<br>2020–22">ABK Egypt<br>2020–22</span></div>
+          <div class="bar" style="--v:3.9"><span class="bar-val">3.9</span><span class="bar-fill"></span><span class="bar-label" data-ar="أبوظبي الأول مصر<br>2022–24">FAB Misr<br>2022–24</span></div>
+          <div class="bar" style="--v:3.2"><span class="bar-val">3.2+</span><span class="bar-fill"></span><span class="bar-label" data-ar="بنك القاهرة<br>2024–25">Banque du Caire<br>2024–25</span></div>
+        </div>
+      </figure>
     </div>
+    <p class="note rv" data-ar="تصف الأرقام المحافظ وقواعد العملاء التي قدّمت فرقه لها التوثيق والمشورة القانونية، وليست أصولاً يملكها أو يديرها شخصياً.">Figures describe portfolios and client bases for which Mina's teams provided legal documentation and advisory, not assets personally owned or managed.</p>
   </div>
 </section>
 
-<!-- ===== 04 CURRENT ROLES ===== -->
-<section class="slide s-light" id="roles" data-title="Current roles" data-title-ar="الأدوار الحالية">
-  <div class="slide-inner">
-    <div class="slide-head">
-      <p class="eyebrow" data-anim><span class="num">03</span><span data-ar="الأدوار الحالية · مجموعة بنك مصر">Current roles · Banque Misr Group</span></p>
-      <h2 class="h-slide" data-anim data-ar="مهمتان متزامنتان داخل <em>مجموعة بنك مصر</em>">Two concurrent mandates across the <em>Banque Misr Group</em></h2>
+<!-- ================= EXPERIENCE ================= -->
+<section class="section light" id="experience" aria-labelledby="exp-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv"><span class="idx">III</span><span data-ar="الخبرة المهنية">Experience</span></p>
+        <h2 id="exp-title" class="h2 rv" data-ar="أربعة بنوك رائدة، كل خطوة <em>أوسع</em> نطاقاً">Four leading banks, each step <em>wider</em> in scope</h2>
+      </div>
+      <p class="sec-lede rv" data-ar="من الحوكمة والعقود، إلى المخاطر القانونية، إلى القيادة الإقليمية، ثم الاستثمار.">From governance and contracts, to legal risk, to regional leadership, and on to investment.</p>
     </div>
+
+    <h3 class="sub rv" data-ar="الأدوار الحالية · مجموعة بنك مصر">Current roles · Banque Misr Group</h3>
     <div class="roles">
-      <article class="role-card" data-anim>
+      <article class="role rv">
         <header>
-          <span class="logo-tile md"><img src="assets/logos/banque-misr.png" alt="Banque Misr"></span>
-          <p class="role-unit" data-ar="بنك مصر · قطاع الابتكار والمشروعات الاستراتيجية">Banque Misr · Innovation &amp; Strategic Ventures Sector</p>
-          <h3 data-ar="مسؤول التحالفات والعقود">Alliances &amp; Contracts Lead</h3>
+          <span class="lg lg-c"><img class="m" src="assets/logos/banque-misr-ink.png" alt="Banque Misr"><img class="c" src="assets/logos/banque-misr.png" alt=""></span>
+          <span class="tag" data-ar="منذ أغسطس 2025">Since Aug 2025</span>
         </header>
+        <p class="role-unit" data-ar="بنك مصر · قطاع الابتكار والمشروعات الاستراتيجية">Banque Misr · Innovation &amp; Strategic Ventures Sector</p>
+        <h4 data-ar="مسؤول التحالفات والعقود">Alliances &amp; Contracts Lead</h4>
         <ul class="ticks">
           <li data-ar="يقود الهيكلة القانونية وإدارة التحالفات الاستراتيجية وشراكات الاستثمار في القطاع">Leads legal structuring and management of the sector's strategic alliances and venture partnerships</li>
           <li data-ar="يتفاوض على اتفاقيات الشراكة ومذكرات التفاهم، بما فيها مع شركاء عالميين في رأس المال المخاطر وإدارة الأصول">Negotiates partnership agreements and MOUs, including with global VC and asset-management partners</li>
@@ -221,210 +197,228 @@
           <li data-ar="بنى أدوات إجراءات تشغيل قياسية ثنائية اللغة لتسريع الموافقات مع أمن المعلومات والامتثال والشؤون القانونية والمخاطر">Built bilingual SOP tools to streamline approvals with InfoSec, Compliance, Legal and Risk</li>
         </ul>
       </article>
-      <article class="role-card role-card-dark" data-anim>
+      <article class="role role-dark rv">
         <header>
-          <span class="logo-tile md"><img src="assets/logos/bm-ventures.png" alt="BM Ventures"></span>
-          <p class="role-unit" data-ar="بي إم فنتشرز · ذراع رأس المال المخاطر والملكية الخاصة لمجموعة بنك مصر">BM Ventures · Banque Misr Group's venture &amp; private-equity arm</p>
-          <h3 data-ar="مستشار مجلس الإدارة ورئيس الشؤون القانونية، الملكية الخاصة ورأس المال المخاطر">Board Advisor &amp; Head of Legal, Private Equity &amp; Venture Capital</h3>
+          <span class="lg"><img src="assets/logos/bm-ventures-ivory.png" alt="BM Ventures"></span>
+          <span class="tag" data-ar="منذ أغسطس 2025">Since Aug 2025</span>
         </header>
+        <p class="role-unit" data-ar="بي إم فنتشرز · ذراع رأس المال المخاطر والملكية الخاصة لمجموعة بنك مصر">BM Ventures · the group's venture &amp; private-equity arm</p>
+        <h4 data-ar="مستشار مجلس الإدارة ورئيس الشؤون القانونية، الملكية الخاصة ورأس المال المخاطر">Board Advisor &amp; Head of Legal, Private Equity &amp; Venture Capital</h4>
         <ul class="ticks">
           <li data-ar="يقود كل مسارات العمل القانونية من الهيكلة والفحص القانوني إلى التفاوض والإغلاق">Leads every legal workstream from structuring and due diligence to negotiation and closing</li>
-          <li data-ar="خطابات الشروط واتفاقيات SAFE والسندات القابلة للتحويل واتفاقيات شراء الأسهم والمساهمين، واتفاقيات الشراكة المحدودة والخطابات الجانبية للصناديق">Term sheets, SAFEs, convertible notes, SPAs and SHAs; fund LPAs and side letters</li>
+          <li data-ar="خطابات الشروط واتفاقيات SAFE والسندات القابلة للتحويل واتفاقيات شراء الأسهم والمساهمين، واتفاقيات الشراكة المحدودة والخطابات الجانبية">Term sheets, SAFEs, convertible notes, SPAs and SHAs; fund LPAs and side letters</li>
           <li data-ar="يقدم المشورة لمجلس الإدارة في قرارات الاستثمار والحوكمة والمخاطر القانونية واستراتيجية الصفقات">Advises the board on investment decisions, governance, legal risk and transaction strategy</li>
           <li data-ar="يدير الشؤون القانونية للمحفظة والمستشارين الخارجيين، بما في ذلك النطاق والأتعاب والإنفاق">Manages portfolio legal matters and external counsel, including scope, fees and spend</li>
         </ul>
       </article>
     </div>
-  </div>
-</section>
 
-<!-- ===== 05 TRACK RECORD ===== -->
-<section class="slide s-dark" id="record" data-title="Track record" data-title-ar="السجل المهني">
-  <div class="slide-inner">
-    <div class="slide-head">
-      <p class="eyebrow" data-anim><span class="num">04</span><span data-ar="السجل المهني">Track record</span></p>
-      <h2 class="h-slide" data-anim data-ar="خبرة على نطاق <em>واسع</em> عبر المحافظ والولايات والاستحواذات">Experience at <em>scale</em> across portfolios, jurisdictions and M&amp;A</h2>
-    </div>
-    <div class="record-grid">
-      <ul class="stats">
-        <li data-anim><span class="stat-num"><small>USD</small><b data-count="7" data-suffix="B+">7B+</b></span><span class="stat-label" data-ar="محافظ ائتمانية تم دعمها: بنك أبوظبي الأول مصر (≈3.9) وبنك القاهرة (+3.2)">Credit portfolios supported: FAB Misr (~3.9B) and Banque du Caire (3.2B+)</span></li>
-        <li data-anim><span class="stat-num"><b data-count="5">5</b></span><span class="stat-label" data-ar="ولايات قضائية: مصر والكويت وعُمان والبحرين والسعودية">MENA jurisdictions: Egypt, Kuwait, Oman, Bahrain, Saudi Arabia</span></li>
-        <li data-anim><span class="stat-num"><b data-count="8">8</b></span><span class="stat-label" data-ar="أعضاء فريق تحت قيادته: 3 مراجعين و5 مُعدّين، بنك القاهرة">Team members led: 3 reviewers and 5 makers, Banque du Caire</span></li>
-        <li data-anim><span class="stat-num"><b data-count="3000" data-suffix="+">3,000+</b></span><span class="stat-label" data-ar="عميل من الشركات عبر المحافظ">Corporate clients covered across portfolios</span></li>
-        <li data-anim><span class="stat-num"><b data-count="1">1</b></span><span class="stat-label" data-ar="استحواذ مصرفي: استحواذ بنك أبوظبي الأول على بنك عوده مصر">Bank acquisition: FAB's acquisition of Bank Audi Egypt</span></li>
-      </ul>
-      <figure class="chart" data-anim>
-        <figcaption><b data-ar="المحفظة تحت التغطية القانونية حسب الدور">Portfolio under legal coverage, by role</b><span data-ar="إجمالي محفظة ائتمان الشركات، بمليارات الدولارات (تقريبي)">Gross corporate credit portfolio, USD billions (approx.)</span></figcaption>
-        <div class="bars">
-          <div class="bar" style="--v:1.3"><span class="bar-val">1.3</span><span class="bar-fill"></span><span class="bar-label" data-ar="البنك الأهلي الكويتي<br>2020–22">ABK Egypt<br>2020–22</span></div>
-          <div class="bar" style="--v:3.9"><span class="bar-val">3.9</span><span class="bar-fill"></span><span class="bar-label" data-ar="أبوظبي الأول مصر<br>2022–24">FAB Misr<br>2022–24</span></div>
-          <div class="bar" style="--v:3.2"><span class="bar-val">3.2+</span><span class="bar-fill"></span><span class="bar-label" data-ar="بنك القاهرة<br>2024–25">Banque du Caire<br>2024–25</span></div>
+    <h3 class="sub rv" data-ar="المسيرة السابقة">Career history</h3>
+    <ol class="timeline">
+      <li class="tl rv">
+        <div class="tl-when"><b>2024 – 2025</b><span data-ar="أكتوبر 2024 – يوليو 2025">Oct 2024 – Jul 2025</span></div>
+        <div class="tl-logo"><span class="lg lg-c"><img class="m" src="assets/logos/banque-du-caire-ink.png" alt="Banque du Caire"><img class="c" src="assets/logos/banque-du-caire.png" alt=""></span></div>
+        <div class="tl-body">
+          <h4 data-ar="قائد فريق العقود والضمانات">Contracts &amp; Collaterals Team Leader</h4>
+          <p class="tl-unit" data-ar="بنك القاهرة · الشركات الكبرى والمتوسطة والقروض المشتركة والمؤسسات غير المصرفية · مخاطر الائتمان">Banque du Caire · Large Corporate, Syndication, Mid-Cap &amp; NBFI · Credit Risk</p>
+          <ul class="ticks">
+            <li data-ar="قاد فريق توثيق قانوني من 8 أعضاء (3 مراجعين و5 مُعدّين) لمحفظة تتجاوز 3.2 مليار دولار ونحو 3,000 عميل">Led an 8-member legal documentation team (3 reviewers, 5 makers) covering a USD 3.2B+ portfolio and ~3,000 clients</li>
+            <li data-ar="قاد صياغة ومراجعة اتفاقيات التسهيلات للقروض والتأجير التمويلي والتخصيم والتوريق">Led drafting and review of facility agreements across loans, leasing, factoring and securitisation</li>
+            <li data-ar="هيكلة حزم الضمانات: السندات الإذنية والكفالات والرهون واتفاقيات التبعية والتعهدات المالية">Structured collateral packages: promissory notes, guarantees, pledges, subordination agreements and financial covenants</li>
+          </ul>
         </div>
-      </figure>
-    </div>
-    <p class="footnote" data-anim data-ar="تصف الأرقام المحافظ وقواعد العملاء التي قدّمت فرقه لها التوثيق والمشورة القانونية، وليست أصولاً يملكها أو يديرها شخصياً. 7 مليارات = أبوظبي الأول مصر + بنك القاهرة.">Figures describe portfolios and client bases for which Mina's teams provided legal documentation and advisory, not assets personally owned or managed. USD 7B+ = FAB Misr + Banque du Caire.</p>
-  </div>
-</section>
-
-<!-- ===== 06 SELECTED MANDATES ===== -->
-<section class="slide s-light" id="mandates" data-title="Selected mandates" data-title-ar="مهام مختارة">
-  <div class="slide-inner">
-    <div class="slide-head split">
-      <div>
-        <p class="eyebrow" data-anim><span class="num">05</span><span data-ar="مهام مختارة">Selected mandates</span></p>
-        <h2 class="h-slide" data-anim data-ar="رأس المال المخاطر والملكية الخاصة <em>والبنوك</em>">Venture, private equity <em>and banking</em></h2>
-      </div>
-      <p class="aside" data-anim data-ar="تم حجب أسماء الأطراف المقابلة حفاظاً على السرية.">Counterparty names withheld for confidentiality.</p>
-    </div>
-    <div class="tombs six">
-      <article class="tomb" data-anim>
-        <p class="t-cat" data-ar="استثمار في صندوق">Fund investment</p>
-        <p class="t-fig" data-ar="3 <small>ملايين دولار</small>"><small>USD</small> 3M</p>
-        <h3 class="t-title" data-ar="التزام كشريك محدود في صندوق رأس مال مخاطر إقليمي">LP commitment to a regional VC fund</h3>
-        <span class="t-rule" aria-hidden="true"></span>
-        <p class="t-desc" data-ar="قاد الفحص القانوني مع مكتب محاماة دولي بسقف أتعاب، وحدد شروطاً سابقة للتوقيع، وتفاوض على الخطاب الجانبي حتى نسخة التوقيع.">Led legal due diligence with international counsel under a fee cap across the LPA, subscription agreement, PPM and side letter; set pre-signing conditions and negotiated the side letter to execution.</p>
-      </article>
-      <article class="tomb" data-anim>
-        <p class="t-cat" data-ar="إدارة المحفظة">Portfolio management</p>
-        <p class="t-fig">3</p>
-        <h3 class="t-title" data-ar="شركات في المحفظة: تمديد السندات القابلة للتحويل">Portfolio companies: note extensions</h3>
-        <span class="t-rule" aria-hidden="true"></span>
-        <p class="t-desc" data-ar="مذكرات لمجلس الإدارة لتمديد السندات القابلة للتحويل لثلاث شركات، بما في ذلك تعديل سقف التقييم، إضافة إلى اتفاقية إعادة هيكلة للمحفظة.">Board memoranda to extend convertible notes for three portfolio companies, including a valuation-cap amendment, plus a portfolio restructuring agreement.</p>
-      </article>
-      <article class="tomb" data-anim>
-        <p class="t-cat" data-ar="استثمارات الشركات الناشئة">Startup investments</p>
-        <p class="t-fig">SAFE · CN</p>
-        <h3 class="t-title" data-ar="تنفيذ الاستثمارات في المراحل المبكرة">Early-stage investment execution</h3>
-        <span class="t-rule" aria-hidden="true"></span>
-        <p class="t-desc" data-ar="التنفيذ القانوني لاستثمارات SAFE والسندات القابلة للتحويل في شركات ناشئة، بما في ذلك الخطابات الجانبية وحمايات المستثمر.">Legal execution of SAFE and convertible-note investments in startups, including negotiated side letters and investor protections.</p>
-      </article>
-      <article class="tomb" data-anim>
-        <p class="t-cat" data-ar="استحواذ مصرفي">Bank M&amp;A</p>
-        <p class="t-fig">1</p>
-        <h3 class="t-title" data-ar="دمج بنك بعد الاستحواذ">Bank acquisition integration</h3>
-        <span class="t-rule" aria-hidden="true"></span>
-        <p class="t-desc" data-ar="عضو مسار العمل القانوني في فريق الدمج لاستحواذ بنك أبوظبي الأول على بنك عوده مصر.">Member of the legal workstream on FAB's acquisition of Bank Audi Egypt (FAB Integration Team).</p>
-      </article>
-      <article class="tomb" data-anim>
-        <p class="t-cat" data-ar="المستشارون الخارجيون">External counsel</p>
-        <p class="t-fig">RFP</p>
-        <h3 class="t-title" data-ar="لجنة قانونية لأنشطة رأس المال المخاطر">Legal panel for VC activity</h3>
-        <span class="t-rule" aria-hidden="true"></span>
-        <p class="t-desc" data-ar="صمم طلب العروض لتعيين مستشارين خارجيين للصفقات ولتوكيل قانوني للمحفظة، وحلّل الإنفاق القانوني.">Designed the RFP to appoint external counsel for transactions and a portfolio legal retainer; analysed legal spend across portfolio buckets.</p>
-      </article>
-      <article class="tomb" data-anim>
-        <p class="t-cat" data-ar="شراكات استراتيجية">Strategic partnerships</p>
-        <p class="t-fig" data-ar="مذكرات تفاهم">MOUs</p>
-        <h3 class="t-title" data-ar="شركاء عالميون وإقليميون">Global and regional partners</h3>
-        <span class="t-rule" aria-hidden="true"></span>
-        <p class="t-desc" data-ar="صاغ مذكرات تفاهم مع شركة رأس مال مخاطر عالمية ومدير أصول وشركاء في المنظومة، وأعد مذكرات للإدارة التنفيذية.">Drafted MOUs with a global VC firm, an asset manager and ecosystem partners; prepared memoranda for executive management.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== 07 BANKING TRANSACTIONS ===== -->
-<section class="slide s-dark" id="transactions" data-title="Banking transactions" data-title-ar="الصفقات المصرفية">
-  <div class="slide-inner">
-    <div class="slide-head split">
-      <div>
-        <p class="eyebrow" data-anim><span class="num">06</span><span data-ar="الصفقات المصرفية">Banking transactions</span></p>
-        <h2 class="h-slide" data-anim data-ar="تمويل مشترك ومهيكل <em>وعابر للحدود</em>">Syndicated, structured <em>and cross-border</em> finance</h2>
-      </div>
-      <div class="carousel-nav" data-anim>
-        <button class="ctl" type="button" data-car="txCar" data-dir="-1" aria-label="Previous transactions"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
-        <button class="ctl" type="button" data-car="txCar" data-dir="1" aria-label="More transactions"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-      </div>
-    </div>
-    <div class="carousel" id="txCar" tabindex="0" aria-label="Banking transactions" data-anim>
-      <article class="tomb tomb-dark">
-        <p class="t-top"><span data-ar="تمويل مهيكل">Structured finance</span><span>2022–2024</span></p>
-        <span class="logo-tile xs logo-fill"><img src="assets/logos/fab-misr.png" alt="FAB Misr"></span>
-        <p class="t-fig" data-ar="3.9 <small>مليار دولار</small>"><small>USD</small> 3.9B</p>
-        <h3 class="t-title" data-ar="إقراض الشركات والتمويل الإسلامي والقروض المشتركة في خمس ولايات">Corporate, Islamic and syndicated lending in five jurisdictions</h3>
-        <span class="t-rule" aria-hidden="true"></span>
-        <p class="t-role"><span data-ar="الدور">Role</span><b data-ar="رئيس القسم، ثلاثة فرق قانونية">Section Head, three legal teams</b></p>
-      </article>
-      <article class="tomb tomb-dark">
-        <p class="t-top"><span data-ar="البنوك والتمويل">Banking &amp; finance</span><span>2024–2025</span></p>
-        <span class="logo-tile xs logo-fill"><img src="assets/logos/banque-du-caire.png" alt="Banque du Caire"></span>
-        <p class="t-fig" data-ar="+3.2 <small>مليار دولار</small>"><small>USD</small> 3.2B+</p>
-        <h3 class="t-title" data-ar="تمويل الشركات الكبرى والمتوسطة والقروض المشتركة والمؤسسات غير المصرفية">Large corporate, mid-cap, syndicated and NBFI financing</h3>
-        <span class="t-rule" aria-hidden="true"></span>
-        <p class="t-role"><span data-ar="الدور">Role</span><b data-ar="قائد الفريق، ثمانية متخصصين">Team Leader, eight professionals</b></p>
-      </article>
-      <article class="tomb tomb-dark">
-        <p class="t-top"><span data-ar="البنوك والتمويل">Banking &amp; finance</span><span>2022–2024</span></p>
-        <span class="logo-tile xs logo-fill"><img src="assets/logos/fab-misr.png" alt="FAB Misr"></span>
-        <p class="t-fig" data-ar="إعادة هيكلة">Restructuring</p>
-        <h3 class="t-title" data-ar="إعادة هيكلة وجدولة مديونيات تسهيلات الشركات">and rescheduling of corporate facility debt</h3>
-        <span class="t-rule" aria-hidden="true"></span>
-        <p class="t-role"><span data-ar="الدور">Role</span><b data-ar="قاد الصياغة والتفاوض">Led drafting &amp; negotiation</b></p>
-      </article>
-      <article class="tomb tomb-dark">
-        <p class="t-top"><span data-ar="البنوك والتمويل">Banking &amp; finance</span><span>2022–2024</span></p>
-        <span class="logo-tile xs logo-fill"><img src="assets/logos/fab-misr.png" alt="FAB Misr"></span>
-        <p class="t-fig" data-ar="تمويل التجارة">Trade finance</p>
-        <h3 class="t-title" data-ar="وصفقات مرتبطة بالتحوط">and hedging-related structures</h3>
-        <span class="t-rule" aria-hidden="true"></span>
-        <p class="t-role"><span data-ar="الدور">Role</span><b data-ar="فريق تنفيذ الصفقات">Transaction execution team</b></p>
-      </article>
-      <article class="tomb tomb-dark">
-        <p class="t-top"><span data-ar="الفحص القانوني">Due diligence</span><span data-ar="المنطقة">MENA</span></p>
-        <span class="logo-tile xs logo-word" data-ar="مؤسسات مالية إقليمية">Regional financial institutions</span>
-        <p class="t-fig" data-ar="عابر للحدود">Cross-border</p>
-        <h3 class="t-title" data-ar="فحص قانوني نافٍ للجهالة">legal due diligence</h3>
-        <span class="t-rule" aria-hidden="true"></span>
-        <p class="t-role"><span data-ar="الدور">Role</span><b data-ar="قاد الفحص القانوني">Led the diligence</b></p>
-      </article>
-      <article class="tomb tomb-dark">
-        <p class="t-top"><span data-ar="تمويل عقاري">Real estate finance</span><span data-ar="الشركات">Corporate</span></p>
-        <span class="logo-tile xs logo-word" data-ar="تمويل الشركات">Corporate banking</span>
-        <p class="t-fig" data-ar="البيع وإعادة الاستئجار">Sale &amp; leaseback</p>
-        <h3 class="t-title" data-ar="صفقات تمويل عقاري لعملاء من الشركات">Real estate financing for corporate clients</h3>
-        <span class="t-rule" aria-hidden="true"></span>
-        <p class="t-role"><span data-ar="الدور">Role</span><b data-ar="مستشار مشارك">Contributing counsel</b></p>
-      </article>
-      <article class="tomb tomb-dark">
-        <p class="t-top"><span data-ar="المخاطر القانونية">Legal risk</span><span>2021–2022</span></p>
-        <span class="logo-tile xs"><img src="assets/logos/abk.png" alt="ABK Egypt"></span>
-        <p class="t-fig" data-ar="1.3 <small>مليار دولار</small>"><small>USD</small> 1.3B</p>
-        <h3 class="t-title" data-ar="استشارات المخاطر القانونية لمحفظة ائتمان الشركات">Legal risk advisory on the corporate credit portfolio</h3>
-        <span class="t-rule" aria-hidden="true"></span>
-        <p class="t-role"><span data-ar="الدور">Role</span><b data-ar="مستشار أول للمخاطر القانونية">Senior Legal Risk Advisor</b></p>
-      </article>
-    </div>
-    <p class="footnote" data-anim data-ar="تمت جميع الأعمال بصفته موظفاً لدى المؤسسات المذكورة. الأرقام تقريبية وتتعلق بالمحافظ وليس بقيمة صفقة بعينها.">All matters were undertaken as an employee of the institutions named. Figures are approximate and relate to portfolios, not to the value of any single transaction.</p>
-  </div>
-</section>
-
-<!-- ===== 08 FLAGSHIP ACHIEVEMENT ===== -->
-<section class="slide s-light" id="achievement" data-title="Flagship achievement" data-title-ar="الإنجاز الأبرز">
-  <div class="slide-inner">
-    <div class="slide-head">
-      <p class="eyebrow" data-anim><span class="num">07</span><span data-ar="إدارة العقود · الإنجاز الأبرز">Contracts management · Flagship achievement</span></p>
-      <h2 class="h-slide" data-anim data-ar="من دورة صياغة تستغرق أسابيع <em>إلى دقائق</em>">From a multi-week drafting cycle <em>to minutes</em></h2>
-    </div>
-    <div class="ach-grid">
-      <div class="speed" data-anim>
-        <p class="speed-kicker"><span class="logo-tile xs logo-fill"><img src="assets/logos/fab-misr.png" alt="FAB Misr"></span><span data-ar="أدخل أول نظام آلي لصياغة عقود التسهيلات">Introduced the first automated drafting of facility contracts</span></p>
-        <div class="speed-row">
-          <div class="speed-cell">
-            <p class="speed-label" data-ar="قبل">Before</p>
-            <p class="speed-num" data-ar="5 <small>أيام</small>">5 <small>days</small></p>
-            <p class="speed-sub" data-ar="وقد تصل إلى 60–90 يوماً">and up to 60–90 days</p>
-          </div>
-          <span class="speed-arrow" aria-hidden="true"><svg viewBox="0 0 48 24"><path d="M2 12h42M34 4l10 8-10 8"/></svg></span>
-          <div class="speed-cell speed-after">
-            <p class="speed-label" data-ar="بعد">After</p>
-            <p class="speed-num" data-ar="≈15 <small>دقيقة</small>">~15 <small>min</small></p>
-            <p class="speed-sub" data-ar="لكل عقد تسهيلات">per facility contract</p>
-          </div>
+      </li>
+      <li class="tl rv">
+        <div class="tl-when"><b>2022 – 2024</b><span data-ar="يونيو 2022 – سبتمبر 2024">Jun 2022 – Sep 2024</span></div>
+        <div class="tl-logo"><span class="lg lg-c"><img class="m" src="assets/logos/fab-ink.png" alt="First Abu Dhabi Bank Misr"><img class="c" src="assets/logos/fab.png" alt=""></span></div>
+        <div class="tl-body">
+          <h4 data-ar="رئيس قسم العقود والضمانات – منطقة الشرق الأوسط وشمال أفريقيا">Contracts &amp; Collaterals Section Head – MENA Region</h4>
+          <p class="tl-unit" data-ar="بنك أبوظبي الأول مصر · قطاع مخاطر الائتمان">First Abu Dhabi Bank Misr · Credit Risk Sector</p>
+          <ul class="ticks">
+            <li data-ar="أشرف على 3 فرق قانونية في 5 ولايات قضائية لمحفظة إجمالية تقارب 3.9 مليار دولار و800 عميل">Supervised 3 legal teams across 5 jurisdictions; gross portfolio of ~USD 3.9B and 800 corporate clients</li>
+            <li data-ar="قاد صياغة اتفاقيات التسهيلات والتمويل المهيكل والتفاوض عليها في الشركات الكبرى والتمويل الإسلامي والقروض المشتركة والخدمات المصرفية الاستثمارية، بما فيها إعادة هيكلة الديون وجدولتها">Led complex facility and structured-finance documentation across Large Corporate, Islamic Finance, Syndication and Investment Banking, including restructuring and rescheduling</li>
+            <li data-ar="أدخل أول نظام آلي لصياغة عقود التسهيلات في البنك">Introduced the bank's first automated drafting of facility contracts</li>
+            <li data-ar="عضو مسار العمل القانوني (فريق الدمج) في استحواذ البنك على بنك عوده مصر">Member of the legal workstream (FAB Integration Team) on FAB's acquisition of Bank Audi Egypt</li>
+          </ul>
         </div>
-        <div class="speed-bars" aria-hidden="true"><span class="sb-before"></span><span class="sb-after"></span></div>
-        <p class="speed-note" data-ar="القوالب الموحدة والأتمتة المنضبطة ومراجعة المُعِد والمراجع تختصر زمن إنجاز عقود الخدمات والمشتريات والتعديلات.">Standard templates, controlled automation and maker–checker review shorten turnaround on service, procurement and amendment documents.</p>
+      </li>
+      <li class="tl rv">
+        <div class="tl-when"><b>2020 – 2022</b><span data-ar="يناير 2020 – يونيو 2022">Jan 2020 – Jun 2022</span></div>
+        <div class="tl-logo"><span class="lg lg-c"><img class="m" src="assets/logos/abk-ink.png" alt="Al Ahli Bank of Kuwait – Egypt"><img class="c" src="assets/logos/abk.png" alt=""></span></div>
+        <div class="tl-body">
+          <h4 data-ar="مستشار أول للمخاطر القانونية · مسؤول الحوكمة والعقود">Senior Legal Risk Advisor · Governance &amp; Contracts Officer</h4>
+          <p class="tl-unit" data-ar="البنك الأهلي الكويتي – مصر · قطاع مخاطر الائتمان">Al Ahli Bank of Kuwait – Egypt · Credit Risk Sector</p>
+          <ul class="ticks">
+            <li data-ar="استشارات المخاطر القانونية لمحفظة ائتمان شركات بنحو 1.3 مليار دولار و350 عميلاً (مارس 2021 – يونيو 2022)">Legal-risk advisory on a ~USD 1.3B corporate credit portfolio of 350 clients (Mar 2021 – Jun 2022)</li>
+            <li data-ar="عقود التسهيلات قصيرة ومتوسطة وطويلة الأجل والاتفاقيات الثلاثية، والامتثال لتعليمات البنك المركزي المصري">STL, MTL, LTL and tri-party facility agreements; compliance with Central Bank of Egypt circulars</li>
+            <li data-ar="عقود المشتريات والإيجار والبرمجيات والخدمات ودورات المناقصات (يناير 2020 – مارس 2021)">Procurement, lease, software and service contracts and tender cycles (Jan 2020 – Mar 2021)</li>
+            <li data-ar="حصل على تكريم الأداء المتميز للتميز في الحوكمة وإدارة العقود">Received ABK's Recognition of Outstanding Performance for governance and contracts management</li>
+          </ul>
+        </div>
+      </li>
+      <li class="tl tl-early rv">
+        <div class="tl-when"><b>2017 – 2019</b><span data-ar="البدايات">Early career</span></div>
+        <div class="tl-logo"><span class="lg lg-sq lg-c"><img class="m" src="assets/logos/arab-league-ink.png" alt="League of Arab States"><img class="c" src="assets/logos/arab-league.png" alt=""></span></div>
+        <div class="tl-body">
+          <h4 data-ar="باحث متطوع · تدريب قانوني">Junior Researcher (Volunteer) · Legal Internships</h4>
+          <p class="tl-unit" data-ar="جامعة الدول العربية ووزارة التخطيط والتنمية الاقتصادية · مايو 2018 – مايو 2019">League of Arab States &amp; Ministry of Planning and Economic Development · May 2018 – May 2019</p>
+          <p class="tl-text" data-ar="ممثل للشباب المصري لمراجعة خطط التنمية المستدامة الوزارية وفق إرشادات الأمم المتحدة. تدريب قانوني في العقود التجارية والتقاضي لدى:">Egyptian youth representative reviewing ministerial sustainable-development plans against UN guidelines. Legal internships in commercial contracts and litigation at:</p>
+          <ul class="interns">
+            <li><span class="lg lg-c"><img class="m" src="assets/logos/orascom-ink.png" alt="Orascom Construction"><img class="c" src="assets/logos/orascom.png" alt=""></span><span>2017</span></li>
+            <li><span class="wordmark" data-ar="عجيبة للبترول">Agiba Petroleum</span><span>2018</span></li>
+            <li><span class="wordmark" data-ar="الخدمات البترولية البحرية">Petroleum Marine Services</span><span>2018</span></li>
+            <li><span class="wordmark" data-ar="بتروتريد">Petrotrade</span><span>2018</span></li>
+          </ul>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- ================= MANDATES & TRANSACTIONS ================= -->
+<section class="section dark" id="mandates" aria-labelledby="mand-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv"><span class="idx">IV</span><span data-ar="المهام والصفقات">Mandates &amp; transactions</span></p>
+        <h2 id="mand-title" class="h2 rv" data-ar="رأس المال المخاطر والملكية الخاصة <em>والبنوك</em>">Venture, private equity <em>and banking</em></h2>
       </div>
-      <aside class="award" data-anim>
+      <p class="sec-lede rv" data-ar="تم حجب أسماء الأطراف المقابلة حفاظاً على السرية. تمت جميع الأعمال بصفته موظفاً لدى المؤسسات المذكورة.">Counterparty names are withheld for confidentiality. All matters were undertaken as an employee of the institutions named.</p>
+    </div>
+    <div class="tabs rv" role="tablist" aria-label="Mandates">
+      <button class="tab" role="tab" id="tab-vc" aria-controls="panel-vc" aria-selected="true" type="button" data-ar="رأس المال المخاطر والملكية الخاصة">Venture &amp; private equity</button>
+      <button class="tab" role="tab" id="tab-bank" aria-controls="panel-bank" aria-selected="false" type="button" data-ar="الصفقات المصرفية">Banking transactions</button>
+      <span class="tab-ink" aria-hidden="true"></span>
+    </div>
+
+    <div class="panel" id="panel-vc" role="tabpanel" aria-labelledby="tab-vc">
+      <div class="tombs">
+        <article class="tomb">
+          <p class="t-cat" data-ar="استثمار في صندوق">Fund investment</p>
+          <p class="t-fig" data-ar="3 <small>ملايين دولار</small>"><small>USD</small> 3M</p>
+          <h4 class="t-title" data-ar="التزام كشريك محدود في صندوق رأس مال مخاطر إقليمي">LP commitment to a regional VC fund</h4>
+          <span class="t-rule" aria-hidden="true"></span>
+          <p class="t-desc" data-ar="قاد الفحص القانوني مع مكتب محاماة دولي بسقف أتعاب عبر اتفاقية الشراكة المحدودة واتفاقية الاكتتاب ومذكرة الطرح والخطاب الجانبي، وحدد شروطاً سابقة للتوقيع، وتفاوض على الخطاب الجانبي حتى التوقيع.">Led legal due diligence with international counsel under a fee cap across the LPA, subscription agreement, PPM and side letter; set pre-signing conditions and negotiated the side letter to execution.</p>
+        </article>
+        <article class="tomb">
+          <p class="t-cat" data-ar="إدارة المحفظة">Portfolio management</p>
+          <p class="t-fig">3</p>
+          <h4 class="t-title" data-ar="شركات في المحفظة: تمديد السندات القابلة للتحويل">Portfolio companies: note extensions</h4>
+          <span class="t-rule" aria-hidden="true"></span>
+          <p class="t-desc" data-ar="مذكرات لمجلس الإدارة لتمديد السندات القابلة للتحويل لثلاث شركات، بما في ذلك تعديل سقف التقييم، إضافة إلى اتفاقية إعادة هيكلة للمحفظة.">Board memoranda to extend convertible notes for three portfolio companies, including a valuation-cap amendment, plus a portfolio restructuring agreement.</p>
+        </article>
+        <article class="tomb">
+          <p class="t-cat" data-ar="استثمارات الشركات الناشئة">Startup investments</p>
+          <p class="t-fig">SAFE · CN</p>
+          <h4 class="t-title" data-ar="تنفيذ الاستثمارات في المراحل المبكرة">Early-stage investment execution</h4>
+          <span class="t-rule" aria-hidden="true"></span>
+          <p class="t-desc" data-ar="التنفيذ القانوني لاستثمارات SAFE والسندات القابلة للتحويل في شركات ناشئة، بما في ذلك الخطابات الجانبية وحمايات المستثمر.">Legal execution of SAFE and convertible-note investments in startups, including negotiated side letters and investor protections.</p>
+        </article>
+        <article class="tomb">
+          <p class="t-cat" data-ar="استحواذ مصرفي">Bank M&amp;A</p>
+          <p class="t-fig">1</p>
+          <h4 class="t-title" data-ar="دمج بنك بعد الاستحواذ">Bank acquisition integration</h4>
+          <span class="t-rule" aria-hidden="true"></span>
+          <p class="t-desc" data-ar="عضو مسار العمل القانوني في فريق الدمج لاستحواذ بنك أبوظبي الأول على بنك عوده مصر.">Member of the legal workstream on FAB's acquisition of Bank Audi Egypt (FAB Integration Team).</p>
+        </article>
+        <article class="tomb">
+          <p class="t-cat" data-ar="المستشارون الخارجيون">External counsel</p>
+          <p class="t-fig">RFP</p>
+          <h4 class="t-title" data-ar="لجنة قانونية لأنشطة رأس المال المخاطر">Legal panel for VC activity</h4>
+          <span class="t-rule" aria-hidden="true"></span>
+          <p class="t-desc" data-ar="صمم طلب العروض لتعيين مستشارين خارجيين للصفقات ولتوكيل قانوني للمحفظة، وحلّل الإنفاق القانوني عبر فئات المحفظة.">Designed the RFP to appoint external counsel for transactions and a portfolio legal retainer; analysed legal spend across portfolio buckets.</p>
+        </article>
+        <article class="tomb">
+          <p class="t-cat" data-ar="شراكات استراتيجية">Strategic partnerships</p>
+          <p class="t-fig" data-ar="مذكرات تفاهم">MOUs</p>
+          <h4 class="t-title" data-ar="شركاء عالميون وإقليميون">Global and regional partners</h4>
+          <span class="t-rule" aria-hidden="true"></span>
+          <p class="t-desc" data-ar="صاغ مذكرات تفاهم مع شركة رأس مال مخاطر عالمية ومدير أصول وشركاء في المنظومة، وأعد مذكرات للإدارة التنفيذية.">Drafted MOUs with a global VC firm, an asset manager and ecosystem partners; prepared memoranda for executive management.</p>
+        </article>
+      </div>
+    </div>
+
+    <div class="panel" id="panel-bank" role="tabpanel" aria-labelledby="tab-bank" hidden>
+      <div class="tombs">
+        <article class="tomb">
+          <p class="t-cat" data-ar="تمويل مهيكل · 2022–2024">Structured finance · 2022–2024</p>
+          <span class="lg"><img src="assets/logos/fab-ivory.png" alt="FAB Misr"></span>
+          <p class="t-fig" data-ar="3.9 <small>مليار دولار</small>"><small>USD</small> 3.9B</p>
+          <h4 class="t-title" data-ar="إقراض الشركات والتمويل الإسلامي والقروض المشتركة في خمس ولايات">Corporate, Islamic and syndicated lending in five jurisdictions</h4>
+          <span class="t-rule" aria-hidden="true"></span>
+          <p class="t-role"><span data-ar="الدور">Role</span><b data-ar="رئيس القسم، ثلاثة فرق قانونية">Section Head, three legal teams</b></p>
+        </article>
+        <article class="tomb">
+          <p class="t-cat" data-ar="البنوك والتمويل · 2024–2025">Banking &amp; finance · 2024–2025</p>
+          <span class="lg"><img src="assets/logos/banque-du-caire-ivory.png" alt="Banque du Caire"></span>
+          <p class="t-fig" data-ar="+3.2 <small>مليار دولار</small>"><small>USD</small> 3.2B+</p>
+          <h4 class="t-title" data-ar="تمويل الشركات الكبرى والمتوسطة والقروض المشتركة والمؤسسات غير المصرفية">Large corporate, mid-cap, syndicated and NBFI financing</h4>
+          <span class="t-rule" aria-hidden="true"></span>
+          <p class="t-role"><span data-ar="الدور">Role</span><b data-ar="قائد الفريق، ثمانية متخصصين">Team Leader, eight professionals</b></p>
+        </article>
+        <article class="tomb">
+          <p class="t-cat" data-ar="المخاطر القانونية · 2021–2022">Legal risk · 2021–2022</p>
+          <span class="lg"><img src="assets/logos/abk-ivory.png" alt="ABK Egypt"></span>
+          <p class="t-fig" data-ar="1.3 <small>مليار دولار</small>"><small>USD</small> 1.3B</p>
+          <h4 class="t-title" data-ar="استشارات المخاطر القانونية لمحفظة ائتمان الشركات">Legal risk advisory on the corporate credit portfolio</h4>
+          <span class="t-rule" aria-hidden="true"></span>
+          <p class="t-role"><span data-ar="الدور">Role</span><b data-ar="مستشار أول للمخاطر القانونية">Senior Legal Risk Advisor</b></p>
+        </article>
+        <article class="tomb">
+          <p class="t-cat" data-ar="إعادة الهيكلة">Restructuring</p>
+          <span class="lg"><img src="assets/logos/fab-ivory.png" alt="FAB Misr"></span>
+          <p class="t-fig" data-ar="إعادة هيكلة">Debt</p>
+          <h4 class="t-title" data-ar="إعادة هيكلة وجدولة مديونيات تسهيلات الشركات">restructuring and rescheduling of corporate facilities</h4>
+          <span class="t-rule" aria-hidden="true"></span>
+          <p class="t-role"><span data-ar="الدور">Role</span><b data-ar="قاد الصياغة والتفاوض">Led drafting &amp; negotiation</b></p>
+        </article>
+        <article class="tomb">
+          <p class="t-cat" data-ar="تمويل التجارة">Trade finance</p>
+          <span class="lg"><img src="assets/logos/fab-ivory.png" alt="FAB Misr"></span>
+          <p class="t-fig" data-ar="التحوط">Hedging</p>
+          <h4 class="t-title" data-ar="صفقات تمويل التجارة والصفقات المرتبطة بالتحوط">trade finance and hedging-related structures</h4>
+          <span class="t-rule" aria-hidden="true"></span>
+          <p class="t-role"><span data-ar="الدور">Role</span><b data-ar="فريق تنفيذ الصفقات">Transaction execution team</b></p>
+        </article>
+        <article class="tomb">
+          <p class="t-cat" data-ar="الفحص القانوني · تمويل عقاري">Due diligence · Real estate</p>
+          <p class="t-fig" data-ar="عابر للحدود">Cross-border</p>
+          <h4 class="t-title" data-ar="فحص قانوني مع مؤسسات مالية إقليمية، وتمويل عقاري يشمل البيع وإعادة الاستئجار">due diligence with regional financial institutions; sale-and-leaseback real estate finance</h4>
+          <span class="t-rule" aria-hidden="true"></span>
+          <p class="t-role"><span data-ar="الدور">Role</span><b data-ar="قاد الفحص · مستشار مشارك">Led diligence · contributing counsel</b></p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FLAGSHIP ACHIEVEMENT ================= -->
+<section class="section light" id="achievement" aria-labelledby="ach-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv"><span class="idx">V</span><span data-ar="الإنجاز الأبرز">Flagship achievement</span></p>
+        <h2 id="ach-title" class="h2 rv" data-ar="من دورة صياغة تستغرق أسابيع <em>إلى دقائق</em>">From a multi-week drafting cycle <em>to minutes</em></h2>
+      </div>
+      <p class="sec-lede rv" data-ar="أدخل أول نظام آلي لصياغة عقود التسهيلات في بنك أبوظبي الأول مصر.">Introduced the first automated drafting of facility contracts at First Abu Dhabi Bank Misr.</p>
+    </div>
+    <div class="ach">
+      <div class="speed rv" id="speed">
+        <div class="speed-cell">
+          <p class="speed-label" data-ar="قبل">Before</p>
+          <p class="speed-num" data-ar="5 <small>أيام</small>">5 <small>days</small></p>
+          <p class="speed-sub" data-ar="وقد تصل إلى 60–90 يوماً">and up to 60–90 days</p>
+          <span class="speed-bar sb-before"></span>
+        </div>
+        <div class="speed-cell speed-after">
+          <p class="speed-label" data-ar="بعد">After</p>
+          <p class="speed-num" data-ar="≈15 <small>دقيقة</small>">~15 <small>min</small></p>
+          <p class="speed-sub" data-ar="لكل عقد تسهيلات">per facility contract</p>
+          <span class="speed-bar sb-after"></span>
+        </div>
+        <p class="speed-note" data-ar="القوالب الموحدة والأتمتة المنضبطة ومراجعة المُعِد والمراجع تختصر زمن الإنجاز وتتيح للفريق التركيز على المراجعة والتفاوض والمخاطر.">Standard templates, controlled automation and maker–checker review free the team for review, negotiation and risk.</p>
+      </div>
+      <aside class="award rv">
         <svg class="seal" viewBox="0 0 200 200" role="img" aria-label="Recognition seal">
           <defs><path id="sealPath" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
           <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" stroke-width="1"/>
@@ -438,23 +432,25 @@
         <ul class="record-list">
           <li><b data-ar="تكريم الأداء المتميز">Recognition of Outstanding Performance</b><span data-ar="الحوكمة وإدارة العقود · البنك الأهلي الكويتي – مصر">Governance and contracts management · ABK Egypt</span></li>
           <li><b data-ar="فريق توثيق من 8 أعضاء بنظام المُعِد والمراجع">8-member maker–checker documentation team</b><span data-ar="نحو 3,000 عميل · بنك القاهرة">~3,000 corporate clients · Banque du Caire</span></li>
-          <li><b data-ar="توثيق العقود والضمانات في 5 ولايات قضائية">Contract &amp; collateral documentation in 5 jurisdictions</b><span data-ar="3 فرق قانونية · أبوظبي الأول مصر">3 legal teams supervised · FAB Misr</span></li>
-          <li><b data-ar="دورة حياة اتفاقيات التحالفات الاستراتيجية بالكامل">End-to-end lifecycle of strategic alliance agreements</b><span data-ar="الهيكلة والتفاوض والإشراف · بنك مصر">Structuring, negotiation and oversight · Banque Misr</span></li>
+          <li><b data-ar="توثيق العقود والضمانات في 5 ولايات قضائية">Documentation in 5 jurisdictions</b><span data-ar="3 فرق قانونية · أبوظبي الأول مصر">3 legal teams supervised · FAB Misr</span></li>
+          <li><b data-ar="دورة حياة اتفاقيات التحالفات الاستراتيجية">Lifecycle of strategic alliance agreements</b><span data-ar="الهيكلة والتفاوض والإشراف · بنك مصر">Structuring, negotiation and oversight · Banque Misr</span></li>
         </ul>
       </aside>
     </div>
   </div>
 </section>
 
-<!-- ===== 09 EXPERTISE ===== -->
-<section class="slide s-dark" id="expertise" data-title="Core expertise" data-title-ar="مجالات الخبرة">
-  <div class="slide-inner">
-    <div class="slide-head">
-      <p class="eyebrow" data-anim><span class="num">08</span><span data-ar="مجالات الخبرة">Core expertise</span></p>
-      <h2 class="h-slide" data-anim data-ar="ثلاث ركائز <em>للممارسة</em>">Three pillars of <em>practice</em></h2>
+<!-- ================= EXPERTISE ================= -->
+<section class="section dark" id="expertise" aria-labelledby="exp2-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv"><span class="idx">VI</span><span data-ar="مجالات الخبرة">Core expertise</span></p>
+        <h2 id="exp2-title" class="h2 rv" data-ar="ثلاث ركائز <em>للممارسة</em>">Three pillars of <em>practice</em></h2>
+      </div>
     </div>
     <div class="pillars">
-      <article data-anim>
+      <article class="rv">
         <span class="p-num">I</span>
         <h3 data-ar="رأس المال المخاطر والملكية الخاصة">Venture &amp; Private Equity</h3>
         <ul>
@@ -466,7 +462,7 @@
           <li data-ar="استشارات مجالس الإدارة">Board advisory</li>
         </ul>
       </article>
-      <article data-anim>
+      <article class="rv">
         <span class="p-num">II</span>
         <h3 data-ar="البنوك والتمويل">Banking &amp; Finance</h3>
         <ul>
@@ -478,7 +474,7 @@
           <li data-ar="قانون البنوك وتعليمات البنك المركزي">Banking law &amp; CBE regulation</li>
         </ul>
       </article>
-      <article data-anim>
+      <article class="rv">
         <span class="p-num">III</span>
         <h3 data-ar="القيادة">Leadership</h3>
         <ul>
@@ -494,51 +490,71 @@
   </div>
 </section>
 
-<!-- ===== 10 CREDENTIALS ===== -->
-<section class="slide s-light" id="credentials" data-title="Education & certifications" data-title-ar="التعليم والشهادات">
-  <div class="slide-inner">
-    <div class="slide-head split">
+<!-- ================= CREDENTIALS ================= -->
+<section class="section light" id="credentials" aria-labelledby="cred-title">
+  <div class="wrap">
+    <div class="sec-head">
       <div>
-        <p class="eyebrow" data-anim><span class="num">09</span><span data-ar="التعليم والشهادات">Education &amp; certifications</span></p>
-        <h2 class="h-slide" data-anim data-ar="تعلّم مستمر في القانون <em>والبنوك والاستثمار</em>">Continuous learning across law, <em>banking and investment</em></h2>
+        <p class="eyebrow rv"><span class="idx">VII</span><span data-ar="التعليم والقيد والشهادات">Education, admissions &amp; certifications</span></p>
+        <h2 id="cred-title" class="h2 rv" data-ar="تعلّم مستمر في القانون <em>والبنوك والاستثمار</em>">Continuous learning across law, <em>banking and investment</em></h2>
       </div>
-      <a class="btn btn-line" data-anim href="assets/docs/Mina_Armanious_Certificates.pdf" target="_blank" rel="noopener" data-ar="عرض الشهادات (PDF)">View certificates (PDF)</a>
+      <a class="btn btn-line rv" href="assets/docs/Mina_Armanious_Certificates.pdf" target="_blank" rel="noopener" data-ar="عرض الشهادات (PDF)">View certificates (PDF)</a>
     </div>
-    <div class="cred-layout">
-      <article class="mlea" data-anim>
-        <p class="badge-live" data-ar="قيد الدراسة">In progress</p>
+
+    <div class="cred-top">
+      <article class="mlea rv">
+        <p class="live" data-ar="قيد الدراسة · دفعة 2026/27">In progress · 2026/27 intake</p>
         <p class="mlea-name">MLEA</p>
-        <h3 data-ar="ماجستير القانون والاقتصاد · دفعة 2026/27">Law &amp; Economics · 2026/27 intake</h3>
-        <p class="mlea-unis" data-ar="جامعة القاهرة، كلية الاقتصاد والعلوم السياسية · جامعة هامبورغ">Cairo University, FEPS · Universität Hamburg</p>
-        <p class="mlea-desc" data-ar="يطبق التحليل الاقتصادي على القانون والتنظيم والعقود، لتقييم الحوافز وتوزيع المخاطر والأثر التجاري للقرارات القانونية.">Applies economic analysis to law, regulation and contracts: incentives, risk allocation and the commercial impact of legal decisions.</p>
-        <div class="foundation">
-          <p><b data-ar="ليسانس الحقوق (القسم الإنجليزي)">LL.B. (English Section)</b><span data-ar="جامعة عين شمس">Ain Shams University</span></p>
-          <p><b data-ar="محامٍ مقيد">Admitted Lawyer</b><span data-ar="نقابة المحامين المصرية · 2020">Egyptian Bar · 2020</span></p>
-          <p><b data-ar="عضو لجنة">IBA Committee Member</b><span data-ar="تنظيم مهنة المحاماة · 2025">Regulation of Lawyers · 2025</span></p>
+        <h3 data-ar="ماجستير القانون والاقتصاد">Master in Law &amp; Economics</h3>
+        <div class="mlea-unis">
+          <span class="lg lg-sq"><img src="assets/logos/cairo-university-ivory.png" alt="Cairo University"></span>
+          <span class="lg"><img src="assets/logos/uni-hamburg-ivory.png" alt="Universität Hamburg"></span>
         </div>
+        <p class="mlea-who" data-ar="جامعة القاهرة، كلية الاقتصاد والعلوم السياسية · جامعة هامبورغ، كلية الحقوق">Cairo University, Faculty of Economics &amp; Political Science · Universität Hamburg, Faculty of Law</p>
+        <p class="mlea-desc" data-ar="المقررات الحالية: مدخل إلى القانون والاقتصاد؛ أسس القانون والاقتصاد (الاقتصاد الجزئي)؛ القانون العام والاقتصاد؛ الأدوات الكمية للقانون والاقتصاد.">Current courses: Introduction to Law &amp; Economics; Foundations of Law &amp; Economics I (Microeconomics); Public Law &amp; Economics I; Quantitative Tools for Law &amp; Economics.</p>
       </article>
-      <ul class="certs">
-        <li data-anim><span class="logo-tile cert-logo"><img src="assets/logos/auc.png" alt="AUC"></span><b data-ar="رأس المال المخاطر: دليل تمويل الشركات الناشئة">Venture Capital: The Guide to Financing Startups</b><span data-ar="الجامعة الأمريكية بالقاهرة · 2025">AUC Onsi Sawiris School of Business · 2025</span></li>
-        <li data-anim><span class="logo-tile cert-logo logo-word">Kouncel</span><b data-ar="محامي رأس المال المخاطر والشركات الناشئة">Venture Capital &amp; Startup Lawyer</b><span data-ar="أكاديمية كاونسل القانونية · 2025">Kouncel Legal Academy · 2025</span></li>
-        <li data-anim><span class="logo-tile cert-logo"><img src="assets/logos/imf.png" alt="IMF"></span><b data-ar="أسس قانون البنوك المركزية">Foundations of Central Bank Law</b><span data-ar="صندوق النقد الدولي · 2025">International Monetary Fund · 2025</span></li>
-        <li data-anim><span class="logo-tile cert-logo logo-word">AfDB</span><b data-ar="شهادة تمويل التجارة في أفريقيا">Certificate of Trade Finance in Africa</b><span data-ar="مجموعة بنك التنمية الأفريقي · 2025">African Development Bank Group · 2025</span></li>
-        <li data-anim><span class="logo-tile cert-logo"><img src="assets/logos/hsbc.png" alt="HSBC"></span><b data-ar="الخدمات المصرفية العالمية والأسواق">Global Banking &amp; Markets</b><span>HSBC · 2024</span></li>
-        <li data-anim><span class="logo-tile cert-logo"><img src="assets/logos/auc.png" alt="AUC"></span><b data-ar="الائتمان المصرفي وإدارة المخاطر">Banking Credit &amp; Risk Management</b><span data-ar="الجامعة الأمريكية بالقاهرة · 2022">AUC Onsi Sawiris School of Business · 2022</span></li>
-        <li data-anim><span class="logo-tile cert-logo"><img src="assets/logos/ebi.png" alt="Egyptian Banking Institute"></span><b data-ar="شهادة محامي البنوك">Banking Lawyer Certificate</b><span data-ar="المعهد المصرفي المصري · 2021">Egyptian Banking Institute · 2021</span></li>
-        <li data-anim><span class="logo-tile cert-logo"><img src="assets/logos/bue.png" alt="The British University in Egypt"></span><b data-ar="دبلومة محامي البنوك">Banking Lawyers Diploma</b><span data-ar="الجامعة البريطانية في مصر · 2020">The British University in Egypt · 2020</span></li>
+      <ul class="foundation">
+        <li class="rv"><span class="lg lg-sq lg-c"><img class="m" src="assets/logos/ain-shams-ink.png" alt="Ain Shams University"><img class="c" src="assets/logos/ain-shams.png" alt=""></span><div><b data-ar="ليسانس الحقوق، القسم الإنجليزي">Bachelor of Laws (LL.B.), English Section</b><span data-ar="جامعة عين شمس، كلية الحقوق">Ain Shams University, Faculty of Law</span></div></li>
+        <li class="rv"><span class="seal-mark" aria-hidden="true">EBA</span><div><b data-ar="محامٍ مقيد">Admitted Lawyer</b><span data-ar="نقابة المحامين المصرية · 2020">Egyptian Bar Association · 2020</span></div></li>
+        <li class="rv"><span class="lg lg-sq lg-c"><img class="m" src="assets/logos/iba-ink.png" alt="International Bar Association"><img class="c" src="assets/logos/iba.png" alt=""></span><div><b data-ar="عضو لجنة تنظيم مهنة المحاماة">Member, Regulation of Lawyers' Committee</b><span data-ar="نقابة المحامين الدولية · 2025">International Bar Association · 2025</span></div></li>
       </ul>
     </div>
+
+    <h3 class="sub rv" data-ar="الشهادات المهنية">Professional certifications</h3>
+    <ul class="certs">
+      <li class="rv"><span class="lg lg-c"><img class="m" src="assets/logos/auc-ink.png" alt="The American University in Cairo"><img class="c" src="assets/logos/auc.png" alt=""></span><b data-ar="رأس المال المخاطر: دليل تمويل الشركات الناشئة">Venture Capital: The Guide to Financing Startups</b><span data-ar="الجامعة الأمريكية بالقاهرة، كلية أنسي ساويرس لإدارة الأعمال · 2025">AUC Onsi Sawiris School of Business · 2025</span></li>
+      <li class="rv"><span class="lg lg-c"><img class="m" src="assets/logos/kouncel-ink.png" alt="Kouncel"><img class="c" src="assets/logos/kouncel.png" alt=""></span><b data-ar="محامي رأس المال المخاطر والشركات الناشئة">Venture Capital &amp; Startup Lawyer</b><span data-ar="أكاديمية كاونسل القانونية · 2025">Kouncel Legal Academy · 2025</span></li>
+      <li class="rv"><span class="lg lg-sq lg-c"><img class="m" src="assets/logos/imf-ink.png" alt="International Monetary Fund"><img class="c" src="assets/logos/imf.png" alt=""></span><b data-ar="أسس قانون البنوك المركزية (FCBLx)">Foundations of Central Bank Law (FCBLx)</b><span data-ar="صندوق النقد الدولي · 2025">International Monetary Fund · 2025</span></li>
+      <li class="rv"><span class="lg lg-sq lg-c"><img class="m" src="assets/logos/afdb-ink.png" alt="African Development Bank Group"><img class="c" src="assets/logos/afdb.png" alt=""></span><b data-ar="شهادة تمويل التجارة في أفريقيا">Certificate of Trade Finance in Africa</b><span data-ar="مجموعة بنك التنمية الأفريقي · 2025">African Development Bank Group · 2025</span></li>
+      <li class="rv"><span class="lg lg-c"><img class="m" src="assets/logos/hsbc-ink.png" alt="HSBC"><img class="c" src="assets/logos/hsbc.png" alt=""></span><b data-ar="الخدمات المصرفية العالمية والأسواق">Global Banking &amp; Markets</b><span>HSBC · 2024</span></li>
+      <li class="rv"><span class="lg lg-c"><img class="m" src="assets/logos/auc-ink.png" alt="The American University in Cairo"><img class="c" src="assets/logos/auc.png" alt=""></span><b data-ar="الائتمان المصرفي وإدارة المخاطر">Banking Credit &amp; Risk Management</b><span data-ar="الجامعة الأمريكية بالقاهرة، كلية أنسي ساويرس لإدارة الأعمال · 2022–2023">AUC Onsi Sawiris School of Business · 2022–2023</span></li>
+      <li class="rv"><span class="lg lg-c"><img class="m" src="assets/logos/ebi-ink.png" alt="Egyptian Banking Institute"><img class="c" src="assets/logos/ebi.png" alt=""></span><b data-ar="شهادة محامي البنوك (168 ساعة)">Banking Lawyer Certificate (168 hours)</b><span data-ar="المعهد المصرفي المصري – البنك المركزي المصري · 2021">Egyptian Banking Institute – Central Bank of Egypt · 2021</span></li>
+      <li class="rv"><span class="lg lg-c"><img class="m" src="assets/logos/bue-ink.png" alt="The British University in Egypt"><img class="c" src="assets/logos/bue.png" alt=""></span><b data-ar="دبلومة محامي البنوك (70 ساعة)">Banking Lawyers Diploma (70 hours)</b><span data-ar="الجامعة البريطانية في مصر · 2020">The British University in Egypt · 2020</span></li>
+    </ul>
+
+    <details class="further rv">
+      <summary><span data-ar="تدريب إضافي">Further training</span><i aria-hidden="true"></i></summary>
+      <ul>
+        <li><span class="lg lg-c"><img class="m" src="assets/logos/banque-misr-ink.png" alt="Banque Misr"><img class="c" src="assets/logos/banque-misr.png" alt=""></span><div><b data-ar="منهج الامتثال المؤسسي">Institutional compliance curriculum</b><span data-ar="الجرائم المالية · الحوكمة المؤسسية · الامتثال التنظيمي · قانون فاتكا · حماية حقوق العملاء · امتثال المؤسسات المالية · بنك مصر · 2025">Financial Crime · Corporate Governance · Regulatory Compliance · FATCA · Customer Rights Protection · Financial Institutions Compliance · Banque Misr · 2025</span></div></li>
+        <li><span class="wordmark" data-ar="أفريكسيم بنك">Afreximbank</span><div><b data-ar="تمويل التجارة (COTFIA 2025)">Trade finance information webinar (COTFIA 2025)</b><span data-ar="أكاديمية أفريكسيم بنك (AFRACAD) · 2025">Afreximbank Academy (AFRACAD) · 2025</span></div></li>
+        <li><span class="wordmark" data-ar="EIFA">EIFA</span><div><b data-ar="المنتجات المالية المتوافقة مع الشريعة (20 ساعة)">Sharia-Compliant Financial Products (20 hours)</b><span data-ar="الجمعية المصرية للتمويل الإسلامي · 2024">Egyptian Islamic Finance Association · 2024</span></div></li>
+        <li><span class="wordmark" data-ar="هيئة الرقابة الإدارية">ACA</span><div><b data-ar="مكافحة الفساد والحوكمة">Anti-Corruption &amp; Governance programme</b><span data-ar="الأكاديمية الوطنية لمكافحة الفساد، هيئة الرقابة الإدارية · 2023">National Anti-Corruption Academy, Administrative Control Authority · 2023</span></div></li>
+      </ul>
+    </details>
   </div>
 </section>
 
-<!-- ===== 11 ENDORSEMENTS ===== -->
-<section class="slide s-dark" id="endorsements" data-title="Endorsements" data-title-ar="التوصيات">
-  <div class="slide-inner">
-    <div class="slide-head">
-      <p class="eyebrow" data-anim><span class="num">10</span><span data-ar="التوصيات">Endorsements</span></p>
-      <h2 class="h-slide" data-anim data-ar="بشهادة <em>الزملاء</em>">In the words of <em>colleagues</em></h2>
+<!-- ================= ENDORSEMENTS ================= -->
+<section class="section dark" id="endorsements" aria-labelledby="end-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv"><span class="idx">VIII</span><span data-ar="التوصيات">Endorsements</span></p>
+        <h2 id="end-title" class="h2 rv" data-ar="بشهادة <em>الزملاء</em>">In the words of <em>colleagues</em></h2>
+      </div>
+      <a class="link rv" href="https://www.linkedin.com/in/mina-armanious/details/recommendations/" target="_blank" rel="noopener" data-ar="قراءة التوصيات كاملة على لينكدإن">Read in full on LinkedIn</a>
     </div>
-    <div class="quotes" id="quotes" data-anim>
+    <div class="quotes rv" id="quotes">
       <figure class="q is-on">
         <blockquote data-ar="نادراً ما ألتقي بمواهب حقيقية تتميز مثل مينا. يمتلك معرفة واسعة بجميع الجوانب القانونية للأعمال المصرفية، وكان حريصاً على الحد من أي مخاطر تواجه مؤسستنا، فيراجع جميع الضمانات والتعهدات بعناية فائقة.">I rarely come across real talents who stand out like Mina. He has wide knowledge in all legal aspects of business banking, and was keen to mitigate any risk facing our entity, reviewing all securities and covenants with extreme carefulness.</blockquote>
         <figcaption><cite data-ar="مايكل وجيه">Michael Wageh</cite><span data-ar="محامي شركات، البنك الأهلي الكويتي – مصر · مدير مباشر">Corporate Lawyer, Al Ahli Bank of Kuwait – Egypt · Direct manager</span></figcaption>
@@ -564,77 +580,90 @@
         <figcaption><cite data-ar="هيثم حسن">Haitham Hassan, MBA</cite><span data-ar="المدير العام للعقود، شركة عجيبة للبترول · أشرف على تدريبه">Contracts General Manager, Agiba Petroleum Co. · Internship supervisor</span></figcaption>
       </figure>
     </div>
-    <div class="q-controls" data-anim>
+    <div class="q-controls rv">
       <button class="ctl" type="button" id="qPrev" aria-label="Previous endorsement"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg></button>
       <div class="q-dots" id="qDots" role="tablist" aria-label="Endorsements"></div>
       <button class="ctl" type="button" id="qNext" aria-label="Next endorsement"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg></button>
-      <a class="link" href="https://www.linkedin.com/in/mina-armanious/details/recommendations/" target="_blank" rel="noopener" data-ar="قراءة التوصيات كاملة على لينكدإن">Read in full on LinkedIn</a>
     </div>
   </div>
 </section>
 
-<!-- ===== 12 WHAT I BRING ===== -->
-<section class="slide s-light" id="bring" data-title="What I bring" data-title-ar="ما أقدمه">
-  <div class="slide-inner">
-    <div class="slide-head">
-      <p class="eyebrow" data-anim><span class="num">11</span><span data-ar="ما أقدمه">What I bring</span></p>
-      <h2 class="h-slide" data-anim data-ar="شريك قانوني يُبقي الأعمال <em>في حركة</em>">Built to lead: a legal partner who keeps the business <em>moving</em></h2>
+<!-- ================= WHAT I BRING ================= -->
+<section class="section light" id="bring" aria-labelledby="bring-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <p class="eyebrow rv"><span class="idx">IX</span><span data-ar="ما أقدمه">What I bring</span></p>
+        <h2 id="bring-title" class="h2 rv" data-ar="شريك قانوني يُبقي الأعمال <em>في حركة</em>">A legal partner who keeps the business <em>moving</em></h2>
+      </div>
     </div>
-    <div class="bring-grid">
-      <ul class="lead-stats" data-anim>
+    <div class="bring">
+      <ul class="lead-stats rv">
         <li><b>8</b><span data-ar="أعضاء فريق تحت قيادته · بنك القاهرة">team members led · Banque du Caire</span></li>
         <li><b>3</b><span data-ar="فرق قانونية في 5 ولايات · أبوظبي الأول مصر">legal teams across 5 jurisdictions · FAB Misr</span></li>
         <li><b>2</b><span data-ar="دوران متزامنان، منهما رئاسة الشؤون القانونية للملكية الخاصة ورأس المال المخاطر">concurrent group roles, incl. Head of Legal, PE &amp; VC</span></li>
         <li><b data-ar="الأول">1st</b><span data-ar="نظام آلي لصياغة عقود التسهيلات · أبوظبي الأول مصر">automated facility-contract drafting · FAB Misr</span></li>
       </ul>
-      <ol class="pillars-list" data-anim>
-        <li><b data-ar="مستشار موثوق للإدارة التنفيذية">Trusted adviser to executive management</b><span data-ar="مستشار مجلس الإدارة ورئيس الشؤون القانونية في بي إم فنتشرز؛ نقطة الاتصال بين مخاطر الائتمان والامتثال والأعمال">Board Advisor &amp; Head of Legal, PE &amp; VC at BM Ventures; focal point between Credit Risk, Compliance and Business</span></li>
+      <ol class="pillars-list rv">
+        <li><b data-ar="مستشار موثوق للإدارة التنفيذية">Trusted adviser to executive management</b><span data-ar="مستشار مجلس الإدارة ورئيس الشؤون القانونية في بي إم فنتشرز؛ نقطة الاتصال بين مخاطر الائتمان والامتثال والأعمال">Board Advisor &amp; Head of Legal, PE &amp; VC; focal point between Credit Risk, Compliance and Business</span></li>
         <li><b data-ar="العقود التجارية من البداية للنهاية">Commercial contracts, end to end</b><span data-ar="عقود المشتريات والخدمات والإيجار والبرمجيات؛ اتفاقيات الشراكة؛ التعديلات وإعادة الهيكلة">Procurement, service, lease and software contracts; partnership agreements; amendments and restructurings</span></li>
         <li><b data-ar="ضوابط تسرّع الأعمال">Controls that speed the business up</b><span data-ar="أول صياغة آلية لعقود التسهيلات؛ مراجعة التوثيق بنظام المُعِد والمراجع">First automated facility-contract drafting; maker–checker documentation review</span></li>
         <li><b data-ar="الالتزامات والمخاطر القانونية تحت السيطرة">Obligations and legal risk under control</b><span data-ar="الفحص القانوني للصناديق والشروط السابقة للتوقيع؛ الامتثال لتعليمات البنك المركزي؛ الإشراف على الشراكات">Fund due diligence and pre-signing conditions; CBE compliance; oversight of active partnerships</span></li>
         <li><b data-ar="شريك عملي للمشتريات والمشروعات">Hands-on partner to procurement and projects</b><span data-ar="دورات المناقصات والتجديدات وإدخال الشركاء حتى التنفيذ">Tender cycles, renewals and partner onboarding, supported through to execution</span></li>
       </ol>
     </div>
-    <div class="seeking" data-anim>
-      <p class="seeking-label" data-ar="منفتح على">Open to</p>
+    <div class="open-to rv">
+      <p class="open-label" data-ar="منفتح على">Open to</p>
       <ul>
         <li data-ar="رئيس الإدارة القانونية">Head of Legal</li>
         <li data-ar="مستشار قانوني لرأس المال المخاطر والملكية الخاصة">VC / PE Legal Counsel</li>
         <li data-ar="مستشار قانوني للصناديق والاستثمار">Fund &amp; Investment Counsel</li>
         <li data-ar="البنوك والتمويل – مكاتب المحاماة">Banking &amp; Finance – Private Practice</li>
       </ul>
-      <button class="btn btn-text" type="button" id="vcardBtn" data-ar="حفظ بطاقة الاتصال">Save contact card</button>
+      <button class="btn-text" type="button" id="vcardBtn" data-ar="حفظ بطاقة الاتصال">Save contact card</button>
     </div>
   </div>
 </section>
 
-<!-- ===== 13 THANK YOU / CONTACT ===== -->
-<section class="slide s-dark s-end" id="contact" data-title="Contact" data-title-ar="التواصل">
-  <div class="slide-inner end-grid">
+<!-- ================= CONTACT ================= -->
+<section class="section dark contact" id="contact" aria-labelledby="contact-title">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap contact-grid">
     <div>
-      <p class="eyebrow" data-anim data-ar="شكراً لكم">Thank you</p>
-      <h2 class="h-end" data-anim data-ar="القانون شريكٌ للأعمال: يهيكل الصفقة، ويوزّع المخاطر، <em>ويُبقي الأعمال في حركة</em>.">Legal as a business partner: structure the deal, allocate the risk, <em>keep the business moving</em>.</h2>
-      <p class="lead" data-anim data-ar="يسعدني الاستماع إلى رؤيتكم حول الأولويات القانونية الأكثر إلحاحاً.">I would welcome your view on where the most pressing legal priorities lie.</p>
-      <div class="docs" data-anim>
+      <p class="eyebrow rv" data-ar="التواصل">Contact</p>
+      <h2 id="contact-title" class="h2 h-xl rv" data-ar="القانون شريكٌ للأعمال: يهيكل الصفقة، ويوزّع المخاطر، <em>ويُبقي الأعمال في حركة</em>.">Legal as a business partner: structure the deal, allocate the risk, <em>keep the business moving</em>.</h2>
+      <p class="lead rv" data-ar="يسعدني الاستماع إلى رؤيتكم حول الأولويات القانونية الأكثر إلحاحاً. تُعامل جميع الاستفسارات بشكل شخصي وبسرية.">I would welcome your view on where the most pressing legal priorities lie. Enquiries are handled personally and in confidence.</p>
+      <div class="docs rv">
         <a class="doc" href="assets/docs/Mina_Armanious_CV.pdf" download><span class="doc-ico">PDF</span><b data-ar="السيرة الذاتية">Curriculum vitae</b></a>
         <a class="doc" href="assets/docs/Mina_Armanious_Certificates.pdf" target="_blank" rel="noopener"><span class="doc-ico">PDF</span><b data-ar="الشهادات المهنية">Professional certificates</b></a>
         <a class="doc" href="assets/docs/Mina_Armanious_Executive_Profile.pptx" download data-optional><span class="doc-ico">PPTX</span><b data-ar="عرض الملف التنفيذي">Executive Profile presentation</b></a>
       </div>
     </div>
-    <ul class="contact-list" data-anim>
+    <ul class="contact-list rv">
       <li><a href="mailto:mina_osama_61@hotmail.com"><span class="k" data-ar="البريد الإلكتروني">Email</span><span class="v ltr">mina_osama_61@hotmail.com</span></a></li>
       <li><a href="tel:+201009399889"><span class="k" data-ar="الهاتف">Telephone</span><span class="v ltr">+20 100 939 9889</span></a></li>
       <li><a href="https://www.linkedin.com/in/mina-armanious/" target="_blank" rel="noopener"><span class="k" data-ar="لينكدإن">LinkedIn</span><span class="v ltr">linkedin.com/in/mina-armanious</span></a></li>
       <li><span class="static"><span class="k" data-ar="الموقع">Location</span><span class="v" data-ar="القاهرة، مصر">Cairo, Egypt</span></span></li>
     </ul>
   </div>
-  <footer class="disclaimer" data-anim>
-    <p data-ar="هذا الموقع ملف مهني شخصي، ولا يُعد عرضاً لتقديم خدمات قانونية ولا يشكل استشارة قانونية ولا ينشئ علاقة بين محامٍ وموكل. الآراء والأوصاف شخصية ولا تصدر نيابة عن أي جهة عمل حالية أو سابقة. الشعارات مملوكة لأصحابها وتُستخدم للإشارة فقط.">This website is a personal professional profile. It is not an offer of legal services, does not constitute legal advice and does not create a lawyer–client relationship. Views and descriptions are personal and are not made on behalf of any current or former employer. Logos belong to their respective owners and are used for identification only.</p>
-    <p>© <span id="year">2026</span> <span data-ar="مينا أسامة أرمانيوس">Mina Osama Armanious</span></p>
-  </footer>
 </section>
-
 </main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a class="brand" href="#top"><svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><rect x=".5" y=".5" width="39" height="39" fill="none" stroke="currentColor" stroke-opacity=".7"/><text x="20" y="26.5" text-anchor="middle" fill="currentColor" font-family="Cormorant Garamond, serif" font-size="17" font-weight="500" letter-spacing="1">MA</text></svg><span class="brand-name" data-ar="مينا أرمانيوس">Mina Armanious</span></a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#profile" data-ar="الملف">Profile</a><a href="#experience" data-ar="الخبرة">Experience</a><a href="#mandates" data-ar="الصفقات">Mandates</a><a href="#credentials" data-ar="المؤهلات">Credentials</a><a href="#contact" data-ar="التواصل">Contact</a>
+      </nav>
+      <a class="to-top" href="#top" aria-label="Back to top"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg></a>
+    </div>
+    <div class="footer-bottom">
+      <p data-ar="هذا الموقع ملف مهني شخصي، ولا يُعد عرضاً لتقديم خدمات قانونية ولا يشكل استشارة قانونية ولا ينشئ علاقة بين محامٍ وموكل. الآراء والأوصاف شخصية ولا تصدر نيابة عن أي جهة عمل حالية أو سابقة. الشعارات مملوكة لأصحابها وتُستخدم للإشارة فقط.">This website is a personal professional profile. It is not an offer of legal services, does not constitute legal advice and does not create a lawyer–client relationship. Views and descriptions are personal and are not made on behalf of any current or former employer. Logos belong to their respective owners and are used for identification only.</p>
+      <p>© <span id="year">2026</span> <span data-ar="مينا أسامة أرمانيوس">Mina Osama Armanious</span></p>
+    </div>
+  </div>
+</footer>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 <script src="js/main.js" defer></script>
