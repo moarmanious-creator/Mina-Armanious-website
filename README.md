@@ -30,7 +30,7 @@ Using one colour per section is what makes all the logos look like a matching se
 colours fade in when a visitor hovers. `js/main.js` sizes each logo so wide wordmarks and square emblems carry equal
 visual weight. Each position caps a logo's height with the `--lh` CSS variable and its width with `--lw`.
 
-Sources: Wikimedia Commons (Banque Misr, FAB, Banque du Caire, ABK, IMF, HSBC, AfDB, Cairo University,
+Sources: Wikimedia Commons (Banque Misr, FAB, Banque du Caire, ABK, IMF, HSBC, Cairo University,
 Universität Hamburg, Arab League) and the institutions' own websites (AUC, IBA, Ain Shams University, Egyptian Banking
 Institute, BUE, Kouncel, Orascom Construction). The BM Ventures logo comes from the original site files.
 
@@ -39,7 +39,7 @@ Still missing:
 - **Egyptian Bar Association:** shown as a typeset "EBA" badge. To use the real logo, add
   `egyptian-bar.png`, `egyptian-bar-ink.png` and `egyptian-bar-ivory.png`, then replace each
   `<span class="seal-mark" ...>EBA</span>` with a `.lg` logo like the others.
-- **Agiba, PMS, Petrotrade, Afreximbank, EIFA and ACA:** shown as text.
+- **Afreximbank, Agiba, PMS, Petrotrade, EIFA and ACA:** shown as text.
 
 ## Documents (assets/docs)
 
