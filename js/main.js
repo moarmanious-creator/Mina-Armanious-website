@@ -86,7 +86,7 @@
     }
     requestAnimationFrame(step);
   }
-  var reveals = document.querySelectorAll('.rv, #chart, #speed, #map');
+  var reveals = document.querySelectorAll('.reveal, #chart, #map');
   if ('IntersectionObserver' in window && !reduceMotion) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
@@ -162,6 +162,18 @@
   qWrap.addEventListener('mouseleave', function () { qDots.classList.remove('paused'); restartQuotes(); });
   restartQuotes();
 
+
+
+  /* ---------- Deal ledger filters ---------- */
+  var filters = Array.prototype.slice.call(document.querySelectorAll('.filter'));
+  var rows = Array.prototype.slice.call(document.querySelectorAll('.lrow[data-f]'));
+  filters.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var f = btn.getAttribute('data-f');
+      filters.forEach(function (b) { b.setAttribute('aria-pressed', String(b === btn)); });
+      rows.forEach(function (r) { r.hidden = !(f === 'all' || r.getAttribute('data-f') === f); });
+    });
+  });
 
   /* ---------- Jurisdictions map ---------- */
   var map = document.getElementById('map');

@@ -13,10 +13,18 @@ python3 -m http.server 8000
 
 Then open http://localhost:8000. Add `?lang=ar` for Arabic.
 
+## Design
+
+Capital-markets noir: obsidian and bone bands, Bodoni Moda for display, Inter Tight for text, and a champagne
+metallic accent used sparingly. All colours and fonts are CSS variables at the top of `css/styles.css`.
+
 ## Sections
 
-Cover (dossier title page with contents and institutions), §I Profile, §II Track record, §III Jurisdictions (interactive map), §IV Experience, §V Mandates & transactions (two tabs),
-§VI Flagship achievement, §VII Core expertise, §VIII Credentials, §IX Endorsements, §X What I bring, §XI Contact.
+Hero ("Counsel to capital.") with a key-figures strip, Current position, Practice (the investment lifecycle in six
+stages, plus instruments), Mandates (the deal ledger, filterable), Reach (interactive jurisdictions map), Record
+(figures, portfolio chart, flagship achievement), Career, Credentials, Endorsements, Contact.
+
+To add a mandate, copy a `.lrow` in `#mandates` and set `data-f="pe"` or `data-f="bank"`.
 
 ## Logos (assets/logos)
 
