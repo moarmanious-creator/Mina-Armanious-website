@@ -552,3 +552,4 @@ li:hover > .lg-c .m, .lg-c:hover .m { opacity: 0; }
   .q figcaption { gap: 14px; }
   .quotes { min-height: 0; }
 }
+.vc-note { margin-top: 26px; padding-top: 20px; border-top: 1px solid var(--hair-dark); max-width: 860px; font-size: 13.5px; line-height: 1.7; color: var(--on-dark-muted); }
