@@ -69,3 +69,31 @@ edit the other as well. Colours and fonts are CSS variables at the top of `css/s
 The map in §III is a dot-matrix drawing generated from the @svg-maps/world outline (CC BY 4.0, credited in the footer).
 Each jurisdiction is a button in the panel (`.jx`, with English and Arabic `data-*` text) and a pin on the map
 (`.pin[data-k]`). To add one, copy a button and a pin and give both the same `data-k`.
+
+## LinkedIn announcements (signings, ceremonies)
+
+The "Signings & announcements" section reads `assets/data/news.json`. To add a post, edit that file on GitHub
+(open it, click the pencil icon, then commit). There are two ways to add an item:
+
+1. **As an embedded LinkedIn post.** On LinkedIn, open the post, choose ••• → *Embed this post*, and copy the part of the
+   embed link that starts with `urn:li:share:` or `urn:li:activity:`:
+
+   ```json
+   [{ "embed": "urn:li:share:7300000000000000000", "title": "Signing ceremony" }]
+   ```
+
+2. **As a card that links to the post,** optionally with a photo you upload to `assets/news/`:
+
+   ```json
+   [{ "date": "November 2026", "title": "Signing ceremony with …", "title_ar": "مراسم توقيع …",
+      "url": "https://www.linkedin.com/posts/…", "image": "assets/news/signing.jpg" }]
+   ```
+
+Separate several items with commas inside the square brackets. While the list is empty, the section shows a
+"Follow on LinkedIn" message instead.
+
+## Recommender photos
+
+Each recommendation shows the person's initials until a photo exists at `assets/people/<name>.jpg`. The expected file
+names are michael-wageh, ibrahim-eid, rami-wahid, saleh-al-hamdan, mohamed-rashwan and haitham-hassan. Photos are shown
+in black and white. Only add a photo with that person's permission.

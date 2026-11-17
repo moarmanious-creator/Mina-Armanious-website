@@ -87,6 +87,7 @@
     requestAnimationFrame(step);
   }
   var reveals = document.querySelectorAll('.reveal, #chart, #map');
+  document.querySelectorAll('.vc-book').forEach(function (el) { el.classList.add('reveal'); });
   if ('IntersectionObserver' in window && !reduceMotion) {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (en) {
@@ -164,6 +165,36 @@
 
 
 
+
+  /* ---------- Recommender photos: shown only if the file exists in assets/people ---------- */
+  document.querySelectorAll('.avatar[data-photo]').forEach(function (el) {
+    var img = new Image();
+    img.onload = function () { el.style.backgroundImage = 'url("' + el.getAttribute('data-photo') + '")'; el.classList.add('has-photo'); };
+    img.src = el.getAttribute('data-photo');
+  });
+
+  /* ---------- LinkedIn announcements (assets/data/news.json) ---------- */
+  var newsGrid = document.getElementById('newsGrid');
+  function esc(t) { return String(t || '').replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function renderNews(items) {
+    if (!newsGrid || !items || !items.length) return;
+    var ar = lang === 'ar';
+    newsGrid.innerHTML = items.map(function (n) {
+      if (n.embed) {
+        return '<div class="news-embed"><iframe src="https://www.linkedin.com/embed/feed/update/' + esc(n.embed) + '" title="' + esc(n.title || 'LinkedIn post') + '" loading="lazy" allowfullscreen></iframe></div>';
+      }
+      var title = ar && n.title_ar ? n.title_ar : n.title;
+      return '<a class="news-card" href="' + esc(n.url) + '" target="_blank" rel="noopener">' +
+        (n.image ? '<img src="' + esc(n.image) + '" alt="" loading="lazy">' : '') +
+        '<div class="nc-body"><time>' + esc(n.date) + '</time><h3>' + esc(title) + '</h3><span class="nc-more">' + (ar ? 'اقرأ على لينكدإن' : 'Read on LinkedIn') + '</span></div></a>';
+    }).join('');
+  }
+  var newsItems = null;
+  if (newsGrid && window.fetch && location.protocol.indexOf('http') === 0) {
+    fetch(newsGrid.getAttribute('data-src'), { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : []; })
+      .then(function (items) { newsItems = items; renderNews(items); }).catch(function () {});
+  }
+
   /* ---------- Deal ledger filters ---------- */
   var filters = Array.prototype.slice.call(document.querySelectorAll('.filter'));
   var rows = Array.prototype.slice.call(document.querySelectorAll('.lrow[data-f]'));
@@ -230,6 +261,7 @@
     store('lang', next);
     requestAnimationFrame(moveInk);
     if (typeof showJurisdiction === 'function') showJurisdiction(currentJ, false);
+    if (newsItems) renderNews(newsItems);
   }
   langBtn.addEventListener('click', function () { setLang(lang === 'ar' ? 'en' : 'ar'); });
   var startLang = new URLSearchParams(location.search).get('lang') || store('lang');
